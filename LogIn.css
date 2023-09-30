@@ -86,6 +86,18 @@ body {
     flex-direction: column;
     gap: 19px;
 }
+.credentials_buttons .credentials .email,
+.credentials_buttons .credentials .password{
+    position: relative;
+}
+.credentials_buttons .credentials .email label,
+.credentials_buttons .credentials .password label {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    font-size: 19.8px;
+    transition: 0.5s;
+}
 .credentials_buttons .credentials .email input,
 .credentials_buttons .credentials .password input {
     padding: 10px 21px;
@@ -103,6 +115,21 @@ body {
 .credentials_buttons .credentials .email input::placeholder,
 .credentials_buttons .credentials .password input::placeholder {
     color: #1B263B;
+}
+
+/* CREDENTIALS PSUEDO */
+.credentials_buttons .credentials .email input:focus~label,
+.credentials_buttons .credentials .email input:valid~label,
+.credentials_buttons .credentials .password input:focus~label,
+.credentials_buttons .credentials .password input:valid~label {
+    transform: translateY(-25px) translateX(-10px) scale(0.7);
+    display: flex;
+    background-color: #D9D9D9;
+    padding: 0 10px;
+}
+.credentials_buttons .credentials .password input:focus~label,
+.credentials_buttons .credentials .password input:valid~label {
+    transform: translateY(-25px) translateX(-15px) scale(0.7);
 }
 /* CREDENTIALS ENDS*/
 
