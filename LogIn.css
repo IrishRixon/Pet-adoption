@@ -183,6 +183,11 @@ body {
     font-size: 19.8px;
     font-weight: 400;
 }
+
+/* BUTTONS PSEUDO */
+.buttons .login_forgotpass .login_button a input:hover {
+    cursor: pointer;
+}
 /* BUTTONS ENDS */
 /* LOG IN ENDS */
 
