@@ -54,7 +54,7 @@ body {
     display: flex;
     align-items: center;
 }
-.login_container {
+.card_container {
     height: 463px;
     border-radius: 32px;
     padding: 35px 35px 45px 35px;
@@ -64,7 +64,7 @@ body {
      16.02683px 16.02683px 32.05365px 0px #BABBB7;
 }
 .body_of_login{
-    display: flex;
+    display: none;
     flex-direction: column;
 
 }
@@ -117,7 +117,7 @@ body {
     color: #1B263B;
 }
 
-/* CREDENTIALS PSUEDO */
+/* CREDENTIALS PSEUDO */
 .credentials_buttons .credentials .email input:focus~label,
 .credentials_buttons .credentials .email input:valid~label,
 .credentials_buttons .credentials .password input:focus~label,
