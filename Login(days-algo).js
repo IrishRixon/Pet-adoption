@@ -10,18 +10,16 @@ const lengthOfChildren = children.length;
 
 
 month.addEventListener('change', function () {
-    let monthValue = -1;
-    let monthInputLowercase = "";
-    let datalistLowercaseValue = "";
+    let monthValue = 0;
+    let monthInputLowercase = month.value.toLowerCase(); ;
 
     // CHECK IF THE INPUTTED MONTH IS VALID
     for(let i = 0; i < lengthOfChildren; i++) {
-        datalistLowercaseValue = children[i].innerText.toLowerCase();
-        monthInputLowercase = month.value.toLowerCase();
-
+        let datalistLowercaseValue = children[i].value.toLowerCase();
+        
         if(monthInputLowercase !== datalistLowercaseValue) {
             errorForMonth.innerText = "Please enter a valid month";
-            console.log("hello");
+            monthValue++;
         }
         else {
             // ELSE JUST REMOVE THE ERROR MESSAGE
@@ -29,22 +27,13 @@ month.addEventListener('change', function () {
             // THE INPUTTED VALUE IS VALID AND EQUALS TO FEBRUARY REMOVE THE ERROR
             // MESSAGE AND EXIT THE FUNCTION
             if(monthInputLowercase === "february") {
-                monthValue = 1;
+                let monthValue = 1;
                 errorForMonth.innerText = "";
-                return;
+                daysAlgo(monthValue);
+                break;
             }
-            else {
-                // IF THE INPUTTED MONTH IS VALID FIND THE VALUE MONTH BASE ON SEQUENCE
-                for(let i = 0; i < lengthOfChildren; i++) {
-                    if(monthInputLowercase !== datalistLowercaseValue) {
-                        monthValue++;
-                    }
-                    else {
-                        daysAlgo(monthValue);
-                        break;
-                    }
-                }
-            }
+            daysAlgo(monthValue);
+            break;
             
         }
     }
@@ -52,37 +41,41 @@ month.addEventListener('change', function () {
 
 
 function daysAlgo(monthValue) {
-    const lastChild = day.lastElementChild,
-    numberOfChildren = day.childElementCount,
-    option = document.createElement("option");
-
+    let numberOfChildren = day.childElementCount;
     if(monthValue === 1) {
-        while (numberOfChildren > 27) {
+        while (numberOfChildren > 28) {
+            const lastChild = day.lastElementChild;
             lastChild.remove();
             numberOfChildren--;
         }
     }
     else if(monthValue % 2 == 0) {
-        if(numberOfChildren <= 27) {
-            while(numberOfChildren != 30) {
+            while(numberOfChildren != 31) {
+                const option = document.createElement("option");
                 numberOfChildren++;
                 option.value = numberOfChildren;
                 option.innerText = numberOfChildren;
-
                 day.appendChild(option);
             }
-        }
     }
-    else {
-        if(numberOfChildren <= 27) {
-            while(numberOfChildren != 29) {
+    else if(monthValue % 2 == 1){
+        
+            while(numberOfChildren < 30) {
+                console.log("hello");
+                const option = document.createElement("option");
                 numberOfChildren++;
                 option.value = numberOfChildren;
                 option.innerText = numberOfChildren;
-
                 day.appendChild(option);
             }
-        }
+
+            while(numberOfChildren > 30) {
+            const lastChild = day.lastElementChild;
+            lastChild.remove();
+            numberOfChildren--;
+            }
+        
+
     }
 }
 
