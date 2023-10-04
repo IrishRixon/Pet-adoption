@@ -10,6 +10,7 @@ const lengthOfChildren = children.length;
 
 
 month.addEventListener('change', function () {
+    let monthValue = 0;
     let monthInputLowercase = month.value.toLowerCase(); ;
 
     // CHECK IF THE INPUTTED MONTH IS VALID
@@ -18,6 +19,7 @@ month.addEventListener('change', function () {
         
         if(monthInputLowercase !== datalistLowercaseValue) {
             errorForMonth.innerText = "Please enter a valid month";
+            monthValue++;
         }
         else {
             // ELSE JUST REMOVE THE ERROR MESSAGE
@@ -30,21 +32,8 @@ month.addEventListener('change', function () {
                 daysAlgo(monthValue);
                 break;
             }
-            else {
-                let monthValue = 0;
-                // IF THE INPUTTED MONTH IS VALID FIND THE VALUE MONTH BASE ON SEQUENCE
-                for(let i = 0; i < lengthOfChildren; i++) {
-                    let datalistLowercaseValue = children[i].value.toLowerCase();
-                    if(monthInputLowercase !== datalistLowercaseValue) {
-                        monthValue = i;
-                    }
-                    else {
-                        daysAlgo(monthValue);
-                        break;
-                    }
-                }
-                break;
-            }
+            daysAlgo(monthValue);
+            break;
             
         }
     }
@@ -53,7 +42,6 @@ month.addEventListener('change', function () {
 
 function daysAlgo(monthValue) {
     let numberOfChildren = day.childElementCount;
-    console.log(monthValue);
     if(monthValue === 1) {
         while (numberOfChildren > 28) {
             const lastChild = day.lastElementChild;
@@ -62,7 +50,6 @@ function daysAlgo(monthValue) {
         }
     }
     else if(monthValue % 2 == 0) {
-        if(numberOfChildren <= 28) {
             while(numberOfChildren != 31) {
                 const option = document.createElement("option");
                 numberOfChildren++;
@@ -70,18 +57,25 @@ function daysAlgo(monthValue) {
                 option.innerText = numberOfChildren;
                 day.appendChild(option);
             }
-        }
     }
-    else {
-        if(numberOfChildren <= 27) {
-            while(numberOfChildren != 30) {
+    else if(monthValue % 2 == 1){
+        
+            while(numberOfChildren < 30) {
+                console.log("hello");
+                const option = document.createElement("option");
                 numberOfChildren++;
                 option.value = numberOfChildren;
                 option.innerText = numberOfChildren;
-
                 day.appendChild(option);
             }
-        }
+
+            while(numberOfChildren > 30) {
+            const lastChild = day.lastElementChild;
+            lastChild.remove();
+            numberOfChildren--;
+            }
+        
+
     }
 }
 
