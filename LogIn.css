@@ -112,23 +112,23 @@ body {
     height: 44px;
     
 }
-.credentials_buttons .credentials .email input::placeholder,
-.credentials_buttons .credentials .password input::placeholder {
+.credentials .email input::placeholder,
+.credentials .password input::placeholder {
     color: #1B263B;
 }
 
 /* CREDENTIALS PSEUDO */
-.credentials_buttons .credentials .email input:focus~label,
-.credentials_buttons .credentials .email input:valid~label,
-.credentials_buttons .credentials .password input:focus~label,
-.credentials_buttons .credentials .password input:valid~label {
+.credentials .email input:focus~label,
+.credentials .email input:valid~label,
+.credentials .password input:focus~label,
+.credentials .password input:valid~label {
     transform: translateY(-25px) translateX(-10px) scale(0.7);
     display: flex;
     background-color: #D9D9D9;
     padding: 0 10px;
 }
-.credentials_buttons .credentials .password input:focus~label,
-.credentials_buttons .credentials .password input:valid~label {
+.credentials .password input:focus~label,
+.credentials .password input:valid~label {
     transform: translateY(-25px) translateX(-15px) scale(0.7);
 }
 /* CREDENTIALS ENDS*/

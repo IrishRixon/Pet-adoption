@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('../fonts/Jomhuria-Regular.ttf') format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* SIGNUP FORM 1 */
+
+/* TITLE */
+.body_of_signup .signup_title {
+    display: flex;
+    justify-content: center;
+    font-family: "Nunito";
+    font-weight: 400;
+    color: #1B263B;
+    font-size: 35px;
+}
+
+/* NAME */
+.credentials_buttons .credentials .name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    gap: 19.643px;
+    
+}
+
+.credentials .name .lastname,
+.credentials .name .firstname {
+    position: relative;
+    width: 47.56%;
+}
+.credentials .name .lastname label,
+.credentials .name .firstname label{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 400;
+    color: var#1B263B;
+}
+.name .nameInput {
+    border-radius: 24px;
+    border: 2px solid #1B263B;
+    background-color: #D9D9D9;
+    padding: 10px 0 10px 19px;
+    width: 100%;
+}
