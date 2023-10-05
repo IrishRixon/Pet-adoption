@@ -80,12 +80,12 @@
               <!-- NAME STARTS -->
               <div class="name">
                 <div class="lastname">
-                  <label>Last Name</label>
                   <input type="text" class="nameInput" required />
+                  <label>Last Name</label>
                 </div>
                 <div class="firstname">
-                  <label>First Name</label>
                   <input type="text" class="nameInput" required />
+                  <label>First Name</label>
                 </div>
               </div>
               <!-- NAME ENDS -->
@@ -96,8 +96,8 @@
                 <!-- MONTH -->
                 <div class="inputs_of_birthday">
                   <div class="months_container">
+                    <input id="month_input" type="text" list="months" required/>
                     <label>Month</label>
-                    <input id="month_input" type="text" list="months" />
                     <datalist id="months">
                       <option value="January">January</option>
                       <option value="February">February</option>
@@ -119,8 +119,8 @@
                   <!-- DAYS -->
                   <div class="days_container">
                     <!-- MONTHS HAS 31 -->
+                    <input type="text" id="daysInput" list="dayslist" disabled="true" required/>
                     <label>Days</label>
-                    <input type="text" id="daysInput" list="dayslist" disabled="true" />
                     <datalist id="dayslist">
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -157,8 +157,8 @@
                   </div>
 
                   <div class="years_container">
+                    <input type="text" id="yearInput" list="yearList" required/>
                     <label>Year</label>
-                    <input type="text" id="yearInput" list="yearList" />
                     <datalist id="yearList">
                       <option value="1990">1990</option>
                       <option value="1991">1991</option>
@@ -196,6 +196,27 @@
                 </div>
               </div>
               <!-- BIRTHDAY ENDS -->
+
+              <!-- GENDER STARTS -->
+              <div class="gender_container">
+                <label>Gender</label>
+                <div class="male">
+                  <input type="radio" name="gender">
+                  <label>Male</label>
+                </div>
+
+                <div class="female">
+                  <input type="radio" name="gender">
+                  <label>female</label>
+                </div>
+
+                <div class="others">
+                  <input type="radio" name="gender">
+                  <label>Others</label>
+                </div>
+              </div>
+              <!-- GENDER ENDS -->
+
             </div>
             <!-- CREDENTIALS ENDS -->
           </div>
