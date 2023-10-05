@@ -84,7 +84,7 @@ body {
 .credentials {
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    
 }
 .credentials_buttons .credentials .email,
 .credentials_buttons .credentials .password{
