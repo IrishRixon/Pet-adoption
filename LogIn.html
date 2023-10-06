@@ -154,6 +154,7 @@
                       <option value="30">30</option>
                       <option value="31">31</option>
                     </datalist>
+                    <p id="error_for_days"></p>
                   </div>
 
                   <div class="years_container">
@@ -192,6 +193,7 @@
                       <option value="2019">2019</option>
                       <option value="2020">2020</option>
                     </datalist>
+                    <p id="error_for_year"></p>
                   </div>
                 </div>
               </div>
@@ -199,7 +201,7 @@
 
               <!-- GENDER STARTS -->
               <div class="gender_container">
-                <label>Gender</label>
+                <label>Gender:</label>
                 <div class="male">
                   <input type="radio" name="gender">
                   <label>Male</label>
@@ -216,12 +218,22 @@
                 </div>
               </div>
               <!-- GENDER ENDS -->
-
             </div>
             <!-- CREDENTIALS ENDS -->
+
+            <!-- BUTTONS STARTS-->
+            <div class="buttons_container">
+              <div class="back_container">
+                <button id="back_button">Back</button>
+              </div>
+              
+              <div class="next_container">
+                <button id="next_button">Next</button>
+              </div>
+            </div>
+            <!-- BUTTONS ENDS-->
           </div>
           <!-- CREDENTIALS_BUTTONS ENDS -->
-
         </div>
         <!-- ========== BODY SIGN UP END ========== -->
       </div>
@@ -236,6 +248,7 @@
   </div>
   <!-- RIGHT SIDE ENDS -->
 </body>
-<script src="Login(days-algo).js"></script>
+<script src="Main.js"></script>
+<script src="Days algo and errorMsg.js"></script>
 
 </html>
