@@ -145,6 +145,5 @@ input:disabled~label {
 .gender_container .female input,
 .gender_container .others input {
     transform: scale(1.3);
-    
 }
 
