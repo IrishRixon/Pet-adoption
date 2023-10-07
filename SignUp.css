@@ -19,6 +19,7 @@
 /* SIGNUP FORM 1 */
 .body_of_signup {
     height: 100%;
+    display: none;
 }
 .credentials_buttons {
     height: 90%;
@@ -36,7 +37,7 @@
 }
 
 /* NAME */
-.credentials_buttons .credentials .name {
+.credentials_buttons .credentials_form1 .name {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -45,13 +46,13 @@
     
 }
 
-.credentials .name .lastname,
-.credentials .name .firstname {
+.credentials_form1 .name .lastname,
+.credentials_form1 .name .firstname {
     position: relative;
     width: 47.56%;
 }
-.credentials .name .lastname label,
-.credentials .name .firstname label{
+.credentials_form1 .name .lastname label,
+.credentials_form1 .name .firstname label{
     position: absolute;
     left: 10%;
     top: 20%;
@@ -174,12 +175,20 @@ input:disabled~label {
     border-radius: 25.185px;
     border: none;
     color: var(--60, #E0E1DD);
+    font-family: Roboto;
+    font-size: 19.843px;
+    font-weight: 400;
 }
 .back_container #back_button {
     background: var(--10-darker, #415A77);
 }
 .next_container #next_button {
     background: var(--30-light, #1B263B);
+}
+
+.back_container #back_button:hover,
+.next_container #next_button:hover {
+    cursor: pointer;
 }
 
 

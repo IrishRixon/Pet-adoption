@@ -16,4 +16,13 @@ const daysInput = document.querySelector('#daysInput'),
     // YEAR
     yearInput = document.querySelector("#yearInput"),
     errorForYear = document.querySelector("#error_for_year"),
-    currentYear = new Date().getFullYear();
+    currentYear = new Date().getFullYear(),
+
+    //SOMETHING TO DO WITH BUTTONS
+    signupBtn = document.querySelector("#signupBtn"),
+    cardContainer = document.querySelector("#card_container"),
+    bodyOfLogin = document.querySelector(".body_of_login"),
+    bodyOfSignup = document.querySelector(".body_of_signup"),
+    backBtn = document.querySelector("#back_button"), //Sign up back button
+    nextBtn = document.querySelector("#next_button"), //Sign up next button
+    pageTitle = document.querySelector("title");
