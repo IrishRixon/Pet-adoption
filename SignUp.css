@@ -24,6 +24,9 @@
 .credentials_buttons {
     height: 90%;
 }
+.credentials_form1 {
+    /* display: none; */
+}
 
 /* TITLE */
 .body_of_signup .signup_title {
@@ -43,7 +46,6 @@
     margin-top: 20px;
     width: 100%;
     gap: 19.643px;
-    
 }
 
 .credentials_form1 .name .lastname,
@@ -191,4 +193,67 @@ input:disabled~label {
     cursor: pointer;
 }
 
+/* FORM2 */
+.credentials_form2 {
+    margin-top: 55px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    justify-content: center;
+    display: none;
+}
+.barangayContainer, 
+.cityContainer, 
+.provinceContainer, 
+.countryContainer {
+    display: flex;
+    position: relative;
+    width: 50%;
+}
 
+.barangayContainer label, 
+.cityContainer label, 
+.provinceContainer label, 
+.countryContainer label {
+    position: absolute;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 19.843px;
+    color: var(--30-light, #1B263B);
+    top: 15%;
+    left: 10%;
+    transition: 0.5s;
+}
+.barangayAndCity,
+.provinceAndCountry {
+    display: flex;
+    gap: 13px;
+}
+
+.barangayContainer input, 
+.cityContainer input, 
+.provinceContainer input, 
+.countryContainer input {
+    width: 100%;
+    padding: 10px 21px;
+    border-radius: 23.557px;
+    border: 2px solid var(--30-light, #1B263B);
+    background: #D9D9D9;
+    outline: none;
+    
+}
+.barangayContainer input:focus~label, 
+.cityContainer input:focus~label, 
+.provinceContainer input:focus~label, 
+.countryContainer input:focus~label,
+.barangayContainer input:valid~label, 
+.cityContainer input:valid~label, 
+.provinceContainer input:valid~label, 
+.countryContainer input:disabled~label {
+    transform: translateY(-20px) translateX(-10px) scale(0.7);
+    display: flex;
+    padding: 0 10px;
+    background: #D9D9D9;
+    
+}

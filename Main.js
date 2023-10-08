@@ -25,4 +25,6 @@ const daysInput = document.querySelector('#daysInput'),
     bodyOfSignup = document.querySelector(".body_of_signup"),
     backBtn = document.querySelector("#back_button"), //Sign up back button
     nextBtn = document.querySelector("#next_button"), //Sign up next button
-    pageTitle = document.querySelector("title");
+    pageTitle = document.querySelector("title"),
+    credentialsForm1 = document.querySelector(".credentials_form1"),
+    credentialsForm2 = document.querySelector(".credentials_form2");
