@@ -1,15 +1,5 @@
-// MONTH CONTAINER AND ITS CHILDREN
-const monthsContainer = document.querySelector(".months_container"),
-    month = monthsContainer.querySelector("#month_input"),
-    monthDatalist = monthsContainer.querySelector("#months"),
-    children = monthDatalist.children,
-    errorForMonth = document.querySelector("#error_for_month"),
-    daysInput = document.querySelector("#daysInput");
 
-const day = document.querySelector("#dayslist");
-let lengthOfChildren = children.length;
-
-
+// DAYS ALGO
 month.addEventListener('change', function () {
     let monthValue = 0;
     let monthInputLowercase = month.value.toLowerCase();;
@@ -85,6 +75,33 @@ function daysAlgo(monthValue) {
         }
     }
 }
+
+// DAYS ERROR MESSAGE
+daysInput.addEventListener('change', () => {
+    let daysInputValue = daysInput.value,
+        daysListChildren = daysList.children.length;
+
+    if (daysInputValue <= 0 || daysInputValue > daysListChildren) {
+        console.log(daysInputValue);
+        errorForDays.textContent = "Please enter valid days";
+    }
+    else {
+        console.log("hello");
+        errorForDays.innerText = "";
+    }
+});
+
+// YEAR ERROR MESSAGE
+yearInput.addEventListener('change', () => {
+    let yearInputValue = yearInput.value;
+
+    if(yearRegex.test(yearInputValue) && yearInputValue > 1800 && yearInputValue <= currentYear) {
+        errorForYear.innerText = "";
+    }
+    else {
+        errorForYear.innerText = "Please enter valid year";
+    }
+});
 
 
 
