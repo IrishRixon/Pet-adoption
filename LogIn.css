@@ -65,7 +65,7 @@ body {
      transition: 0.5s;
 }
 .body_of_login{
-    /* display: none; */
+    display: none;
     flex-direction: column;
 
 }
