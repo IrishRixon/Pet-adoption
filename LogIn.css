@@ -21,7 +21,6 @@
 body {
     height: 100vh;
     background-color: #E0E1DD;
-    overflow: hidden;
 }
 .container {
     position: relative;
@@ -200,7 +199,7 @@ body {
 .rightside {
     width: 50%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 65%;
     top: 0;
     background-color: #1B263B;
