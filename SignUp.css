@@ -255,5 +255,106 @@ input:disabled~label {
     display: flex;
     padding: 0 10px;
     background: #D9D9D9;
+}
+
+/* FORM 3 */
+.credentials_form3 {
+    display: none;
+    flex-direction: column;
+    gap: 23px;
+    margin-top: 20px;
+}
+.credentials_form3 .email_container,
+.credentials_form3 .password_container,
+.credentials_form3 .reenterPassword_container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.credentials_form3 .email_container label,
+.credentials_form3 .password_container label,
+.credentials_form3 .reenterPassword_container label {
+    display: flex;
+    position: absolute;
+    font-family: "Roboto";
+    font-size: 19.843px;
+    font-weight: 400;
+    top: 20%;
+    left: 15%;
+    transition: 0.5s;
+}
+.credentials_form3 .email_container input,
+.credentials_form3 .password_container input,
+.credentials_form3 .reenterPassword_container input {
+    width: 80%;
+    border-radius: 23.557px;
+    border: 2px solid var(--30-light, #1B263B);
+    background: #D9D9D9;
+    padding: 10px 21px;
+}
+.credentials_form3 .email_container input:focus~label,
+.credentials_form3 .password_container input:focus~label,
+.credentials_form3 .reenterPassword_container input:focus~label,
+.credentials_form3 .email_container input:valid~label,
+.credentials_form3 .password_container input:valid~label,
+.credentials_form3 .reenterPassword_container input:valid~label {
+    transform: translateY(-25px) translateX(-10px) scale(0.7);
+    display: flex;
+    padding: 0 10px;
+    background: #D9D9D9;
+}
+
+/* VERIFICATION */
+.verification_container{
+    display: none;
+}
+.verification_container .verificationTxt_container {
+    margin: 10px 0 20px 0;
+}
+
+.verification_container .verificationTxt_container p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--30-darker, #0D1B2A);
+    font-family: Roboto;
+}
+.verification_container .verificationTxt_container span {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.verification_container .verificationTxt_container a {
+    color: var(--10-darker, #415A77);
+    text-decoration-line: underline;
+    font-size: 15px;
+}
+.verification_container .codeInput_container input {
+    width: 100%;
+    height: 58px;
+    border-radius: 5px;
+    border: 2px solid var(--10-darker, #415A77);
+    background: #D9D9D9;
+    font-size: 30px;
+    padding: 0 10px;
+    outline: none;
+    margin-bottom: 20px;
+}
+.resendCode_container span {
+    font-size: 15px;
+    color: var(--30-darker, #0D1B2A);
+    margin-right: 5px;
+}
+.resendCode_container a {
+    color: var(--10-darker, #415A77);
+    font-size: 15px;
+    text-decoration-line: underline;
+}
+
+/* TOGGLE */
+button.verifyBtn#back_button {
+    width: 350px;
+    border-radius: 10px;
     
 }
