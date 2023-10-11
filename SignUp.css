@@ -19,13 +19,13 @@
 /* SIGNUP FORM 1 */
 .body_of_signup {
     height: 100%;
-    /* display: none; */
+    display: none;
 }
 .credentials_buttons {
     height: 90%;
 }
 .credentials_form1 {
-    display: none;
+    /* display: none; */
 }
 
 /* TITLE */
@@ -306,6 +306,9 @@ input:disabled~label {
 }
 
 /* VERIFICATION */
+.verification_container{
+    display: none;
+}
 .verification_container .verificationTxt_container {
     margin: 10px 0 20px 0;
 }
@@ -347,4 +350,11 @@ input:disabled~label {
     color: var(--10-darker, #415A77);
     font-size: 15px;
     text-decoration-line: underline;
+}
+
+/* TOGGLE */
+button.verifyBtn#back_button {
+    width: 350px;
+    border-radius: 10px;
+    
 }
