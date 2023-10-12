@@ -30,14 +30,7 @@ backBtn.addEventListener('click',function() {
         credentialsForm1.style.display = "block";
         credentialsForm2.style.display = "none";
     }
-    // else if(currentPage == formPages[3]) {
-    //     currentPage = formPages[2];
-
-    //     cardContainer.style.height = "434.014px";
-    //     signupTitleTxt.innerText = "Sign Up";
-    //     credentialsForm2.style.display = "flex";
-    //     verificationContainer.style.display = "none";
-    // }
+    
 });
 
 //NEXT BUTTON 

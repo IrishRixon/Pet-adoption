@@ -10,6 +10,10 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <link rel="stylesheet" href="LogIn.css" />
     <link rel="stylesheet" href="SignUp.css" />
   </head>
@@ -26,7 +30,7 @@
 
       <div class="wrapper row">
         <!-- CARD CONTAINER START-->
-        <div id="card_container" class="col-4">
+        <div id="card_container" class="col-6">
           <!-- BODY OF LOG IN STARTS -->
           <div class="body_of_login">
             <header class="login_title">
@@ -290,22 +294,21 @@
               <!-- VERIFICATION CODE STARTS-->
               <div class="verification_container">
                 <div class="verificationTxt_container">
-                  <p>
-                    We've sent the verification code to email:
-                  </p>
+                  <p>We've sent the verification code to email:</p>
                   <span>Loremipsum@gmail.com</span
-                  ><a href="#" id="incorrectEmailTxt" >Incorrect email?</a>
+                  ><a href="#" id="incorrectEmailTxt">Incorrect email?</a>
                 </div>
 
                 <div class="codeInput_container">
-                  <input type="text" required>
+                  <input type="text" required />
                 </div>
 
                 <div class="resendCode_container">
-                  <span>Didn't get the code?</span><a href="#" class="resendCode">Click to resend.</a>
+                  <span>Didn't get the code?</span
+                  ><a href="#" class="resendCode">Click to resend.</a>
                 </div>
               </div>
-              <!-- VERIFICATION CODE ENDS-->
+              <!-- VERIFICATION CODE ENDS -->
 
               <!-- BUTTONS STARTS-->
               <div class="buttons_container">
@@ -321,6 +324,14 @@
             </div>
             <!-- CREDENTIALS_BUTTONS ENDS -->
           </div>
+
+          <!-- ACCOUNT CREATED SUCCESSFULLY STARTS -->
+          <div class="accountCreated_container">
+            <span id="accountCreatedText">Account successfully created!</span>
+            <span class="material-icons"> check_circle </span>
+          </div>
+          <!-- ACCOUNT CREATED SUCCESSFULLY ENDS -->
+
           <!-- ========== BODY SIGN UP END ========== -->
         </div>
         <!-- CARD CONTAINER ENDS-->

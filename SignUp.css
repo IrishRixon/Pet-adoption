@@ -355,6 +355,21 @@ input:disabled~label {
 /* TOGGLE */
 button.verifyBtn#back_button {
     width: 350px;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
+}
+
+/* ACCOUNT SUCCESSFULLY CREATED */
+.accountCreated_container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.accountCreated_container #accountCreatedText {
+    font-family: Nunito;
+}
+.accountCreated_container span.material-icons {
+    font-size: 30px;
+    display: flex;
+    color: #3BA44B;
 }
