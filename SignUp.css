@@ -183,9 +183,11 @@ input:disabled~label {
 }
 .back_container #back_button {
     background: var(--10-darker, #415A77);
+    transition: ease-in-out 0.3s;
 }
 .next_container #next_button {
     background: var(--30-light, #1B263B);
+    transition: ease-in-out 0.3s;
 }
 
 .back_container #back_button:hover,
@@ -353,7 +355,7 @@ input:disabled~label {
 }
 
 /* TOGGLE */
-button.verifyBtn#back_button {
+button.verifyBtn#next_button {
     width: 350px;
     border-radius: 10px;   
 }
