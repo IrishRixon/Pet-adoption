@@ -33,4 +33,5 @@ const daysInput = document.querySelector('#daysInput'),
     verificationContainer = document.querySelector(".verification_container"),
     incorrectEmailTxt = document.querySelector("#incorrectEmailTxt"),
     buttonsContainer = document.querySelector(".buttons_container"),
-    accountSuccess = document.querySelector(".accountCreated_container");
+    accountSuccess = document.querySelector(".accountCreated_container"),
+    checkIcon = document.querySelector("#checkIcon");

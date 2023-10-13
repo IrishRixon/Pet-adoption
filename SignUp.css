@@ -63,6 +63,7 @@
     font-weight: 400;
     color: var#1B263B;
     transition: 0.5s;
+    opacity: 50%;
 }
 .name .nameInput {
     border-radius: 24px;
@@ -79,6 +80,7 @@
     background: #D9D9D9;
     transform: translateY(-25px) translateX(-10px) scale(0.7);
     padding: 0 10px;
+    opacity: 100%;
 }
 
 /* BIRTHDAY */
@@ -107,6 +109,7 @@
     font-weight: 400;
     color: #1B263B;
     transition: 0.5s;
+    opacity: 50%;
 }
 #month_input, #daysInput, #yearInput {
     height: 100%;
@@ -134,6 +137,7 @@
     background: #D9D9D9;
     transform: translateY(-20px) translateX(-10px) scale(0.7);
     padding: 0 10px;
+    opacity: 100%;
 } 
 input:disabled~label {
     color: #9f9f9f;
@@ -226,6 +230,7 @@ input:disabled~label {
     top: 15%;
     left: 10%;
     transition: 0.5s;
+    opacity: 50%;
 }
 .barangayAndCity,
 .provinceAndCountry {
@@ -257,6 +262,7 @@ input:disabled~label {
     display: flex;
     padding: 0 10px;
     background: #D9D9D9;
+    opacity: 100%;
 }
 
 /* FORM 3 */
@@ -285,6 +291,7 @@ input:disabled~label {
     top: 20%;
     left: 15%;
     transition: 0.5s;
+    opacity: 50%;
 }
 .credentials_form3 .email_container input,
 .credentials_form3 .password_container input,
@@ -305,6 +312,7 @@ input:disabled~label {
     display: flex;
     padding: 0 10px;
     background: #D9D9D9;
+    opacity: 100%;
 }
 
 /* VERIFICATION */
@@ -374,4 +382,6 @@ button.verifyBtn#next_button {
     font-size: 30px;
     display: flex;
     color: #3BA44B;
+    transition: linear 1s;
+    visibility: hidden;
 }

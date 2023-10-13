@@ -75,6 +75,10 @@ nextBtn.addEventListener('click', function () {
         accountSuccess.style.display = "flex";
         bodyOfSignup.style.display = "none";
 
+        setTimeout(function() {
+            checkIcon.style.visibility = "visible";
+        },1000);
+
         setTimeout(function () {
             currentPage = formPages[0];
 
@@ -89,6 +93,7 @@ nextBtn.addEventListener('click', function () {
             buttonsContainer.style.gap = "123px";
             nextBtn.classList.remove("verifyBtn");
             signupTitleTxt.innerText = "Sign Up";
+            checkIcon.style.visibility = "hidden";
         }, 3500);
     }
 });
