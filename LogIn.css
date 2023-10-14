@@ -163,14 +163,23 @@ body {
 .forgotpass_button {
     text-align: center;
 }
-.forgotpass_button a{
+.forgotpass_button button{
     font-family: 'Roboto';
     font-size: 15px;
     font-weight: 400;
     color: #1B263B;
+    background-color: transparent;
+    border: none;
 }
-.forgotpass_button a:active {
+.forgotpass_button button:active {
     color: #415a88;
+}
+.forgotpass_button button:focus {
+    outline: none;
+}
+.forgotpass_button button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 .signUp_button {
     display: flex;

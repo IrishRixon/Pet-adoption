@@ -30,300 +30,309 @@
 
       <div class="wrapper row">
         <!-- CARD CONTAINER START-->
-        <div id="card_container" class="col-4">
+        <div id="card_container" class="col-6">
           <!-- BODY OF LOG IN STARTS -->
-          <div class="body_of_login">
+          <div class="body_of_login d-none">
             <header class="login_title">
               <h3>Log In</h3>
             </header>
 
             <!-- CREDENTIALS AND BUTTONS STARTS -->
-            <div class="credentials_buttons">
-              <div class="credentials_login">
-                <div class="email">
-                  <input required="" type="text" />
-                  <label>Email</label>
-                </div>
-
-                <div class="password">
-                  <input required="" type="password" />
-                  <label>Password</label>
-                </div>
-              </div>
-
-              <div class="buttons">
-                <div class="login_forgotpass">
-                  <div class="login_button">
-                    <a href="home.html">
-                      <input type="submit" value="Log In" />
-                    </a>
+            <form action="#" id="loginForm">
+              <div class="credentials_buttons">
+                <div class="credentials_login">
+                  <div class="email">
+                    <input required="" type="text" />
+                    <label>Email</label>
                   </div>
 
-                  <div class="forgotpass_button">
-                    <a href="#">Forgot Password?</a>
+                  <div class="password">
+                    <input required="" type="password" />
+                    <label>Password</label>
                   </div>
                 </div>
-                <div class="signUp_button">
-                  <button id="signupBtn" class="signup">Sign up</button>
+
+                <div class="buttons">
+                  <div class="login_forgotpass">
+                    <div class="login_button">
+                      <a href="home.html">
+                        <input type="submit" value="Log In" />
+                      </a>
+                    </div>
+
+                    <div class="forgotpass_button">
+                      <a href="#">Forgot Password?</a>
+                    </div>
+                  </div>
+                  <div class="signUp_button">
+                    <button id="signupBtn" class="signup">Sign up</button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
             <!-- CREDENTIALS AND BUTTONS ENDS -->
           </div>
           <!-- BODY OF LOG IN ENDS -->
 
           <!-- ========== BODY SIGN UP START ========== -->
-          <div class="body_of_signup">
-            <!-- TITLE START -->
-            <header class="signup_title">
-              <h3 id="signup_titleTxt">Sign Up</h3>
-            </header>
-            <!-- TITLE END -->
+          <form action="#" id="signupForm" class="d-none">
+            <div class="body_of_signup">
+              <!-- TITLE START -->
+              <header class="signup_title">
+                <h3 id="signup_titleTxt">Sign Up</h3>
+              </header>
+              <!-- TITLE END -->
 
-            <!-- CREDENTIALS_BUTTONS START -->
-            <div class="credentials_buttons">
-              <!-- CREDENTIALS FORM 1 START -->
-              <div class="credentials_form1">
-                <!-- NAME STARTS -->
-                <div class="name">
-                  <div class="lastname">
-                    <input type="text" class="nameInput" required />
-                    <label>Last Name</label>
-                  </div>
-                  <div class="firstname">
-                    <input type="text" class="nameInput" required />
-                    <label>First Name</label>
-                  </div>
-                </div>
-                <!-- NAME ENDS -->
-
-                <!-- BIRTHDAY STARTS -->
-                <div class="birthday">
-                  <label>Birthday:</label>
-                  <!-- MONTH -->
-                  <div class="inputs_of_birthday">
-                    <div class="months_container">
-                      <input
-                        id="month_input"
-                        type="text"
-                        list="months"
-                        required
-                      />
-                      <label>Month</label>
-                      <datalist id="months">
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                      </datalist>
-
-                      <p id="error_for_month"></p>
+              <!-- CREDENTIALS_BUTTONS START -->
+              <div class="credentials_buttons">
+                <!-- CREDENTIALS FORM 1 START -->
+                <div class="credentials_form1">
+                  <!-- NAME STARTS -->
+                  <div class="name">
+                    <div class="lastname">
+                      <input type="text" class="nameInput" required />
+                      <label>Last Name</label>
                     </div>
-
-                    <!-- DAYS -->
-                    <div class="days_container">
-                      <!-- MONTHS HAS 31 -->
-                      <input
-                        type="text"
-                        id="daysInput"
-                        list="dayslist"
-                        disabled="true"
-                        required
-                      />
-                      <label>Days</label>
-                      <datalist id="dayslist">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                      </datalist>
-                      <p id="error_for_days"></p>
-                    </div>
-
-                    <div class="years_container">
-                      <input
-                        type="text"
-                        id="yearInput"
-                        list="yearList"
-                        required
-                      />
-                      <label>Year</label>
-                      <datalist id="yearList">
-                        <option value="1990">1990</option>
-                        <option value="1991">1991</option>
-                        <option value="1992">1992</option>
-                        <option value="1993">1993</option>
-                        <option value="1994">1994</option>
-                        <option value="1995">1995</option>
-                        <option value="1996">1996</option>
-                        <option value="1997">1997</option>
-                        <option value="1998">1998</option>
-                        <option value="1999">1999</option>
-                        <option value="2000">2000</option>
-                        <option value="2001">2001</option>
-                        <option value="2002">2002</option>
-                        <option value="2003">2003</option>
-                        <option value="2004">2004</option>
-                        <option value="2005">2005</option>
-                        <option value="2006">2006</option>
-                        <option value="2007">2007</option>
-                        <option value="2008">2008</option>
-                        <option value="2009">2009</option>
-                        <option value="2010">2010</option>
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                        <option value="2017">2017</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                      </datalist>
-                      <p id="error_for_year"></p>
+                    <div class="firstname">
+                      <input type="text" class="nameInput" required />
+                      <label>First Name</label>
                     </div>
                   </div>
+                  <!-- NAME ENDS -->
+
+                  <!-- BIRTHDAY STARTS -->
+                  <div class="birthday">
+                    <label>Birthday:</label>
+                    <!-- MONTH -->
+                    <div class="inputs_of_birthday">
+                      <div class="months_container">
+                        <input
+                          id="month_input"
+                          type="text"
+                          list="months"
+                          required
+                        />
+                        <label>Month</label>
+                        <datalist id="months">
+                          <option value="January">January</option>
+                          <option value="February">February</option>
+                          <option value="March">March</option>
+                          <option value="April">April</option>
+                          <option value="May">May</option>
+                          <option value="June">June</option>
+                          <option value="July">July</option>
+                          <option value="August">August</option>
+                          <option value="September">September</option>
+                          <option value="October">October</option>
+                          <option value="November">November</option>
+                          <option value="December">December</option>
+                        </datalist>
+
+                        <p id="error_for_month"></p>
+                      </div>
+
+                      <!-- DAYS -->
+                      <div class="days_container">
+                        <!-- MONTHS HAS 31 -->
+                        <input
+                          type="text"
+                          id="daysInput"
+                          list="dayslist"
+                          disabled="true"
+                          required
+                        />
+                        <label>Days</label>
+                        <datalist id="dayslist">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </datalist>
+                        <p id="error_for_days"></p>
+                      </div>
+
+                      <div class="years_container">
+                        <input
+                          type="text"
+                          id="yearInput"
+                          list="yearList"
+                          required
+                        />
+                        <label>Year</label>
+                        <datalist id="yearList">
+                          <option value="1990">1990</option>
+                          <option value="1991">1991</option>
+                          <option value="1992">1992</option>
+                          <option value="1993">1993</option>
+                          <option value="1994">1994</option>
+                          <option value="1995">1995</option>
+                          <option value="1996">1996</option>
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                          <option value="1999">1999</option>
+                          <option value="2000">2000</option>
+                          <option value="2001">2001</option>
+                          <option value="2002">2002</option>
+                          <option value="2003">2003</option>
+                          <option value="2004">2004</option>
+                          <option value="2005">2005</option>
+                          <option value="2006">2006</option>
+                          <option value="2007">2007</option>
+                          <option value="2008">2008</option>
+                          <option value="2009">2009</option>
+                          <option value="2010">2010</option>
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                        </datalist>
+                        <p id="error_for_year"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BIRTHDAY ENDS -->
+
+                  <!-- GENDER STARTS -->
+                  <div class="gender_container">
+                    <label>Gender:</label>
+                    <div class="male">
+                      <input type="radio" name="gender" />
+                      <label>Male</label>
+                    </div>
+
+                    <div class="female">
+                      <input type="radio" name="gender" />
+                      <label>female</label>
+                    </div>
+
+                    <div class="others">
+                      <input type="radio" name="gender" />
+                      <label>Others</label>
+                    </div>
+                  </div>
+                  <!-- GENDER ENDS -->
                 </div>
-                <!-- BIRTHDAY ENDS -->
+                <!-- CREDENTIALS FORM 1 ENDS -->
 
-                <!-- GENDER STARTS -->
-                <div class="gender_container">
-                  <label>Gender:</label>
-                  <div class="male">
-                    <input type="radio" name="gender" />
-                    <label>Male</label>
+                <!-- CREDENTIALS FORM 2 STARTS -->
+                <div class="credentials_form2">
+                  <div class="barangayAndCity">
+                    <div class="barangayContainer">
+                      <input type="text" required />
+                      <label>Barangay</label>
+                    </div>
+
+                    <div class="cityContainer">
+                      <input type="text" required />
+                      <label>City</label>
+                    </div>
                   </div>
 
-                  <div class="female">
-                    <input type="radio" name="gender" />
-                    <label>female</label>
-                  </div>
+                  <div class="provinceAndCountry">
+                    <div class="provinceContainer">
+                      <input type="text" required />
+                      <label>Province</label>
+                    </div>
 
-                  <div class="others">
-                    <input type="radio" name="gender" />
-                    <label>Others</label>
+                    <div class="countryContainer">
+                      <input
+                        type="text"
+                        required
+                        value="Philippines"
+                        disabled
+                      />
+                      <label>Country</label>
+                    </div>
                   </div>
                 </div>
-                <!-- GENDER ENDS -->
-              </div>
-              <!-- CREDENTIALS FORM 1 ENDS -->
+                <!-- CREDENTIALS FORM 2 ENDS -->
 
-              <!-- CREDENTIALS FORM 2 STARTS -->
-              <div class="credentials_form2">
-                <div class="barangayAndCity">
-                  <div class="barangayContainer">
+                <!-- CREDENTIALS FORM 3 STARTS -->
+                <div class="credentials_form3">
+                  <div class="email_container">
                     <input type="text" required />
-                    <label>Barangay</label>
+                    <label>Enter email</label>
                   </div>
 
-                  <div class="cityContainer">
+                  <div class="password_container">
+                    <input type="password" required />
+                    <label>Enter password</label>
+                  </div>
+
+                  <div class="reenterPassword_container">
+                    <input type="password" required />
+                    <label>Confirm password</label>
+                  </div>
+                </div>
+                <!-- CREDENTIALS FORM 3 ENDS -->
+
+                <!-- VERIFICATION CODE STARTS-->
+                <div class="verification_container">
+                  <div class="verificationTxt_container">
+                    <p>We've sent the verification code to email:</p>
+                    <span>Loremipsum@gmail.com</span
+                    ><a href="#" id="incorrectEmailTxt">Incorrect email?</a>
+                  </div>
+
+                  <div class="codeInput_container">
                     <input type="text" required />
-                    <label>City</label>
-                  </div>
-                </div>
-
-                <div class="provinceAndCountry">
-                  <div class="provinceContainer">
-                    <input type="text" required />
-                    <label>Province</label>
                   </div>
 
-                  <div class="countryContainer">
-                    <input type="text" required value="Philippines" disabled />
-                    <label>Country</label>
+                  <div class="resendCode_container">
+                    <span>Didn't get the code?</span
+                    ><a href="#" class="resendCode">Click to resend.</a>
                   </div>
                 </div>
+                <!-- VERIFICATION CODE ENDS -->
+
+                <!-- BUTTONS STARTS-->
+                <div class="buttons_container">
+                  <div class="back_container">
+                    <button class="" id="back_button">Back</button>
+                  </div>
+
+                  <div class="next_container">
+                    <button id="next_button">Next</button>
+                  </div>
+                </div>
+                <!-- BUTTONS ENDS-->
               </div>
-              <!-- CREDENTIALS FORM 2 ENDS -->
-
-              <!-- CREDENTIALS FORM 3 STARTS -->
-              <div class="credentials_form3">
-                <div class="email_container">
-                  <input type="text" required />
-                  <label>Enter email</label>
-                </div>
-
-                <div class="password_container">
-                  <input type="password" required />
-                  <label>Enter password</label>
-                </div>
-
-                <div class="reenterPassword_container">
-                  <input type="password" required />
-                  <label>Confirm password</label>
-                </div>
-              </div>
-              <!-- CREDENTIALS FORM 3 ENDS -->
-
-              <!-- VERIFICATION CODE STARTS-->
-              <div class="verification_container">
-                <div class="verificationTxt_container">
-                  <p>We've sent the verification code to email:</p>
-                  <span>Loremipsum@gmail.com</span
-                  ><a href="#" id="incorrectEmailTxt">Incorrect email?</a>
-                </div>
-
-                <div class="codeInput_container">
-                  <input type="text" required />
-                </div>
-
-                <div class="resendCode_container">
-                  <span>Didn't get the code?</span
-                  ><a href="#" class="resendCode">Click to resend.</a>
-                </div>
-              </div>
-              <!-- VERIFICATION CODE ENDS -->
-
-              <!-- BUTTONS STARTS-->
-              <div class="buttons_container">
-                <div class="back_container">
-                  <button class="" id="back_button">Back</button>
-                </div>
-
-                <div class="next_container">
-                  <button id="next_button">Next</button>
-                </div>
-              </div>
-              <!-- BUTTONS ENDS-->
+              <!-- CREDENTIALS_BUTTONS ENDS -->
             </div>
-            <!-- CREDENTIALS_BUTTONS ENDS -->
-          </div>
+          </form>
 
           <!-- ACCOUNT CREATED SUCCESSFULLY STARTS -->
           <div class="accountCreated_container">
@@ -331,8 +340,16 @@
             <span id="checkIcon" class="material-icons"> check_circle </span>
           </div>
           <!-- ACCOUNT CREATED SUCCESSFULLY ENDS -->
-
           <!-- ========== BODY SIGN UP END ========== -->
+
+
+          <!-- ========== FORGOT PASSWORD STARTS ========== -->
+          <div class="body_of_forgotPass">
+            <header class="forgotPass_title">
+              <h3 id="forgotPass_titleTxt">Find Your Account</h3>
+            </header>
+          </div>
+          <!-- ========== FORGOT PASSWORD STARTS ========== -->
         </div>
         <!-- CARD CONTAINER ENDS-->
       </div>
