@@ -446,7 +446,7 @@ button.verifyBtn#next_button {
     font-size: 19.843px;
     font-family: Roboto;
 }
-.buttons_of_forgotPass .searchBtn {
+.buttons_of_forgotPass #searchBtn {
     background: var(--30-light, #1B263B);
 }
 .buttons_of_forgotPass button:hover {

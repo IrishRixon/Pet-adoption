@@ -110,3 +110,10 @@ incorrectEmailTxt.addEventListener('click', function () {
     buttonsContainer.style.gap = "123px";
     nextBtn.classList.remove("verifyBtn");
 });
+
+// FORGOT PASS
+searchBtn.addEventListener('click', function() {
+    forgotPassTitle.innerText = "We'll send a code to your email";
+    forgotPassTitle.style.fontSize = "28px";
+    forgotPassTitle.style.borderBottom = "1px solid #415A77";
+});

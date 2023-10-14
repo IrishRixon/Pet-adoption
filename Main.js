@@ -28,10 +28,15 @@ const daysInput = document.querySelector('#daysInput'),
     pageTitle = document.querySelector("title"),
     credentialsForm1 = document.querySelector(".credentials_form1"),
     credentialsForm2 = document.querySelector(".credentials_form2"),
-    credentialsForm3 = document.querySelector(".credentials_form3")
+    credentialsForm3 = document.querySelector(".credentials_form3"),
     signupTitleTxt = document.querySelector("#signup_titleTxt"),
     verificationContainer = document.querySelector(".verification_container"),
     incorrectEmailTxt = document.querySelector("#incorrectEmailTxt"),
     buttonsContainer = document.querySelector(".buttons_container"),
     accountSuccess = document.querySelector(".accountCreated_container"),
-    checkIcon = document.querySelector("#checkIcon");
+    checkIcon = document.querySelector("#checkIcon"),
+    
+    // FORGOT PASS
+    cancelBtn = document.querySelector("#cancelBtn"),
+    searchBtn = document.querySelector("#searchBtn"),
+    forgotPassTitle = document.querySelector("#forgotPass_titleTxt");
