@@ -388,3 +388,75 @@ button.verifyBtn#next_button {
     transition: linear 1s;
     visibility: hidden;
 }
+
+/* FORGOT PASS */
+.body_of_forgotPass {
+    height: 100%;
+    width: 100%;
+}
+.forgotPass_title h3 {
+    font-family: Nunito;
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+}
+.forgotPass_form1 {
+    margin-top: 24px;
+}
+.forgotPass_form1 p {
+    font-family: Roboto;
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.forgotPass_form1 .inputEmail_container {
+    position: relative;
+}
+.forgotPass_form1 .inputEmail_container input {
+    border-radius: 23.557px;
+    background: #D9D9D9;
+    border: 2px solid var(--30-light, #1B263B);
+    padding: 10.289px 10px 14.289px 19.643px;
+    width:100%;
+}
+.forgotPass_form1 .inputEmail_container label {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    font-size: 19.843px;
+    opacity: 50%;
+    display: flex;
+    transition: 0.5s;
+}
+.buttons_of_forgotPass {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    display: flex;
+    gap: 14px;
+}
+.buttons_of_forgotPass button {
+    background: var(--10-darker, #415A77);
+    border-radius: 25.185px;
+    border: 26px;
+    padding: 7.632px 2px;
+    height: 46px;
+    width: 130px;
+    color: var(--60, #E0E1DD);
+    font-size: 19.843px;
+    font-family: Roboto;
+}
+.buttons_of_forgotPass .searchBtn {
+    background: var(--30-light, #1B263B);
+}
+.buttons_of_forgotPass button:hover {
+    cursor: pointer;
+}
+.forgotPass_form1 .inputEmail_container input:focus~label,
+.forgotPass_form1 .inputEmail_container input:valid~label {
+    padding: 0 10px;
+    background-color: #D9D9D9;
+    transform: translateX(-10px) translateY(-24px) scale(0.7);
+    opacity: 100%;
+    display: flex;
+}

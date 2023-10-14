@@ -241,3 +241,6 @@ body {
 }
 /* RIGHT SIDE ENDS */
 
+#card_container {
+    height: 317px;
+}
