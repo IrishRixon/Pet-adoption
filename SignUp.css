@@ -460,3 +460,58 @@ button.verifyBtn#next_button {
     opacity: 100%;
     display: flex;
 }
+
+/* FORM 2 FORGET PASS */
+.body_of_forgotPass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forgotPass_form2 {
+    width: 80%;
+    margin-top: 20px;
+    gap: 33px;
+    display: flex;
+    flex-direction: column;
+}
+.forgotPass_form2 .text span {
+    font-family: Roboto;
+    font-size: 15px;
+    color: var(--30-light, #1B263B);
+}
+.forgotPass_form2 .text #spanEmail {
+    font-weight: bold;
+}
+.forgotPass_form2 .accountToDisplay_container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.forgotPass_form2 .accountToDisplay_container .image_container {
+    background: url("../images/defaultpic.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+}
+.accountName span {
+    font-size: 19.843px;
+    font-weight: 600;
+}
+.notYouBtn button {
+    border: none;
+    background: transparent;
+    color: var(--10-darker, #415A77);
+}
+
+
+.notYouBtn button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.notYouBtn button:focus {
+    outline: none;
+}
+.notYouBtn button:active {
+    color: #59789c;
+}

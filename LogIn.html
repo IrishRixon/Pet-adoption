@@ -349,10 +349,10 @@
             </header>
 
             <!-- FORM 1 -->
-            <div class="forgotPass_form1">
+            <div class="forgotPass_form1 d-none">
               <p>Please enter your email to search your account.</p>
               <div class="inputEmail_container">
-                <input type="text" required/>
+                <input type="text" required />
                 <label>Please enter email</label>
               </div>
 
@@ -360,10 +360,29 @@
                 <button id="cancelBtn">Cancel</button>
                 <button id="searchBtn">Search</button>
               </div>
+            </div>
+            <!-- FORM 2 -->
+            <div class="forgotPass_form2">
+              <div class="text">
+                <span>We can send email to:</span>
+                <span id="spanEmail">Loremipsum@gmail.com</span>
+              </div>
 
-              <!-- FORM 2 -->
-              <div class="forgotPass_form2">
-                <p>We can send email to: </p><span>Loremipsum@gmail.com</span>
+              <div class="accountToDisplay_container">
+                <div class="image_container"></div>
+
+                <div class="accountName">
+                  <span>Lorem ipsum</span>
+                </div>
+
+                <div class="notYouBtn">
+                  <button type="button">Not you?</button>
+                </div>
+              </div>
+
+              <div class="form2Buttons_container">
+                <button type="button">Log In using password</button>
+                <button type="button">Continue</button>
               </div>
             </div>
           </div>
