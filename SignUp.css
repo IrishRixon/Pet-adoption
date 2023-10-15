@@ -320,7 +320,7 @@ form {
 
 /* VERIFICATION */
 .verification_container{
-    display: none;
+    /* display: none; */
 }
 .verification_container .verificationTxt_container {
     margin: 10px 0 20px 0;

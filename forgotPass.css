@@ -2,7 +2,7 @@
 .body_of_forgotPass {
     height: 100%;
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 .forgotPass_title h3 {
     font-family: Nunito;

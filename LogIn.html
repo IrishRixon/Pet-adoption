@@ -32,15 +32,15 @@
 
       <div class="wrapper row">
         <!-- CARD CONTAINER START-->
-        <div id="card_container" class="col-4">
+        <div id="card_container" class="col-6">
           <!-- BODY OF LOG IN STARTS -->
-          <div class="body_of_login">
+          <div class="body_of_login d-none">
             <header class="login_title">
               <h3>Log In</h3>
             </header>
 
             <!-- CREDENTIALS AND BUTTONS STARTS -->
-            <form action="#" id="loginForm">
+            <form action="#" id="loginForm" >
               <div class="credentials_buttons">
                 <div class="credentials_login">
                   <div class="email">
@@ -77,7 +77,7 @@
           <!-- BODY OF LOG IN ENDS -->
 
           <!-- ========== BODY SIGN UP START ========== -->
-          <form action="#" id="signupForm" class="">
+          <form action="#" id="signupForm" class="d-none">
             <div class="body_of_signup">
               <!-- TITLE START -->
               <header class="signup_title">
@@ -351,7 +351,7 @@
             </header>
 
             <!-- FORM 1 -->
-            <div class="forgotPass_form1">
+            <div class="forgotPass_form1 d-none">
               <p>Please enter your email to search your account.</p>
               <div class="inputEmail_container">
                 <input type="text" required />
@@ -363,8 +363,9 @@
                 <button id="searchBtn">Search</button>
               </div>
             </div>
+
             <!-- FORM 2 -->
-            <div class="forgotPass_form2 m-auto">
+            <div class="forgotPass_form2 m-auto d-none">
               <div class="text">
                 <span>We can send email to:</span>
                 <span id="spanEmail">Loremipsum@gmail.com</span>
@@ -385,6 +386,26 @@
               <div class="form2Buttons_container">
                 <button id="loginPass" type="button">Log In using password</button>
                 <button id="continueBtn" type="button">Continue</button>
+              </div>
+            </div>
+
+            <!-- FORM 3 -->
+            <div class="forgotPass_form3">
+              <div class="verification_container">
+                <div class="verificationTxt_container">
+                  <p>We've sent the verification code to email:</p>
+                  <span>Loremipsum@gmail.com</span
+                  ><a href="#" id="incorrectEmailTxt">Incorrect email?</a>
+                </div>
+
+                <div class="codeInput_container">
+                  <input type="text" required />
+                </div>
+
+                <div class="resendCode_container">
+                  <span>Didn't get the code?</span
+                  ><a href="#" class="resendCode">Click to resend.</a>
+                </div>
               </div>
             </div>
           </div>

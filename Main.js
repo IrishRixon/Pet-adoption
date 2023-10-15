@@ -45,7 +45,10 @@ const daysInput = document.querySelector('#daysInput'),
     forgotPassForm1 = document.querySelector(".forgotPass_form1"),
     forgotPassForm2 = document.querySelector(".forgotPass_form2"),
     notYouBtn = document.querySelector("#notYouBtn"),
-    signupForm = document.querySelector("#signupForm");
+    signupForm = document.querySelector("#signupForm"),
+    loginUsingPassword = document.querySelector("#loginPass");
+
+
 
 function forgotPassOpenClose(status) {
     if (status == "open") {
@@ -55,5 +58,14 @@ function forgotPassOpenClose(status) {
         cardContainer.className = "col-6";
         forgotPassForm1.style.display = "block";
         signupForm.style.display = "none";
+    }
+}
+
+function logInOpenClose(status) {
+    if (status == "open") {
+        bodyOfLogin.style.display = "block";
+        pageTitle.innerText = "Log In";
+        cardContainer.style.height = "460px";
+        cardContainer.className = "col-4";
     }
 }

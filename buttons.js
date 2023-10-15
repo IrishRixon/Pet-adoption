@@ -10,7 +10,7 @@ signupBtn.addEventListener("click", function () {
         bodyOfLogin.style.display = "none";
         credentialsForm1.style.display = "block";
         bodyOfSignup.style.display = "block";
-
+        signupForm.style.display = "block";
         pageTitle.innerText = "Sign Up";
     }
 });
@@ -121,6 +121,7 @@ forgotPassBtn.addEventListener('click', function(){
         forgotPassOpenClose("open");
     }
 });
+
 searchBtn.addEventListener('click', function () {
     if (forgotPassCurrentPage == forgotPassFormPage[1]) {
         forgotPassCurrentPage = forgotPassFormPage[2];
@@ -135,6 +136,8 @@ searchBtn.addEventListener('click', function () {
 });
 
 cancelBtn.addEventListener('click', function() {
+    forgotPassCurrentPage = forgotPassFormPage[0];
+    
     cardContainer.className = "col-4";
     bodyOfLogin.style.display = "block";
     bodyOfForgotPass.style.display = "none";
@@ -152,4 +155,9 @@ notYouBtn.addEventListener('click', function() {
         forgotPassForm1.style.display = "block";
         forgotPassForm2.style.display = "none";
     }
+});
+
+loginUsingPassword.addEventListener('click', function() {
+    logInOpenClose('open');
+    bodyOfForgotPass.style.display = "none";
 });
