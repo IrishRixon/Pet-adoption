@@ -40,14 +40,16 @@ const daysInput = document.querySelector('#daysInput'),
     forgotPassBtn = document.querySelector("#forgotPassBtn"),
     cancelBtn = document.querySelector("#cancelBtn"),
     searchBtn = document.querySelector("#searchBtn"),
+    continueBtn = document.querySelector("#continueBtn"),
     bodyOfForgotPass = document.querySelector(".body_of_forgotPass"),
     forgotPassTitle = document.querySelector("#forgotPass_titleTxt"),
     forgotPassForm1 = document.querySelector(".forgotPass_form1"),
     forgotPassForm2 = document.querySelector(".forgotPass_form2"),
+    forgotPassForm3 = document.querySelector(".forgotPass_form3"),
     notYouBtn = document.querySelector("#notYouBtn"),
     signupForm = document.querySelector("#signupForm"),
-    loginUsingPassword = document.querySelector("#loginPass");
-
+    loginUsingPassword = document.querySelector("#loginPass"),
+    forgotIncorrectEmailTxt = document.querySelector("#forgotIncorrectEmailTxt");
 
 
 function forgotPassOpenClose(status) {

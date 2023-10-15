@@ -99,24 +99,26 @@ nextBtn.addEventListener('click', function () {
 });
 
 incorrectEmailTxt.addEventListener('click', function () {
-    currentPage = formPages[3];
+    if (currentPage == formPages[4]) {
+        currentPage = formPages[3];
 
-    cardContainer.style.height = "434.014px";
-    signupTitleTxt.innerText = "Sign Up";
-    credentialsForm3.style.display = "flex";
-    verificationContainer.style.display = "none";
-    backBtn.style.display = "block";
-    nextBtn.innerText = "Next";
-    buttonsContainer.style.gap = "123px";
-    nextBtn.classList.remove("verifyBtn");
+        cardContainer.style.height = "434.014px";
+        signupTitleTxt.innerText = "Sign Up";
+        credentialsForm3.style.display = "flex";
+        verificationContainer.style.display = "none";
+        backBtn.style.display = "block";
+        nextBtn.innerText = "Next";
+        buttonsContainer.style.gap = "123px";
+        nextBtn.classList.remove("verifyBtn");
+    }
 });
 
 // FORGOT PASS
-const forgotPassFormPage = ["Log In", "Find Account", "Send Code"];
-let forgotPassCurrentPage = forgotPassFormPage[0];
+const forgotPassFormPage = ["Log In", "Find Account", "Send Code", "Enter Code"];
+let forgotPassCurrentPage = forgotPassFormPage[3];
 
-forgotPassBtn.addEventListener('click', function(){
-    if(forgotPassCurrentPage == forgotPassFormPage[0]) {
+forgotPassBtn.addEventListener('click', function () {
+    if (forgotPassCurrentPage == forgotPassFormPage[0]) {
         forgotPassCurrentPage = forgotPassFormPage[1];
         forgotPassOpenClose("open");
     }
@@ -135,9 +137,9 @@ searchBtn.addEventListener('click', function () {
 
 });
 
-cancelBtn.addEventListener('click', function() {
+cancelBtn.addEventListener('click', function () {
     forgotPassCurrentPage = forgotPassFormPage[0];
-    
+
     cardContainer.className = "col-4";
     bodyOfLogin.style.display = "block";
     bodyOfForgotPass.style.display = "none";
@@ -145,8 +147,8 @@ cancelBtn.addEventListener('click', function() {
     cardContainer.style.height = "460px";
 });
 
-notYouBtn.addEventListener('click', function() {
-    if(forgotPassCurrentPage == forgotPassFormPage[2]) {
+notYouBtn.addEventListener('click', function () {
+    if (forgotPassCurrentPage == forgotPassFormPage[2]) {
         forgotPassCurrentPage = forgotPassFormPage[1];
 
         forgotPassTitle.innerText = "Find Your Account";
@@ -157,7 +159,29 @@ notYouBtn.addEventListener('click', function() {
     }
 });
 
-loginUsingPassword.addEventListener('click', function() {
+loginUsingPassword.addEventListener('click', function () {
     logInOpenClose('open');
     bodyOfForgotPass.style.display = "none";
+});
+
+continueBtn.addEventListener('click', function () {
+    if (forgotPassCurrentPage == forgotPassFormPage[2]) {
+        forgotPassCurrentPage = forgotPassFormPage[3];
+
+        forgotPassTitle.innerText = "Enter Code";
+        forgotPassForm2.style.display = "none";
+        forgotPassForm3.style.display = "block";
+    }
+});
+
+forgotIncorrectEmailTxt.addEventListener('click', function() {
+    if(forgotPassCurrentPage == forgotPassFormPage[3]) {
+        forgotPassCurrentPage = forgotPassFormPage[2];
+
+        forgotPassTitle.innerText = "We'll send a code to your email";
+        forgotPassTitle.style.fontSize = "28px";
+        forgotPassTitle.style.borderBottom = "1px solid #415A77";
+        forgotPassForm3.style.display = "none";
+        forgotPassForm2.style.display = "flex";
+    }
 });

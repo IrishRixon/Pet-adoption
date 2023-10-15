@@ -157,3 +157,17 @@
 .notYouBtn button:active {
     color: #59789c;
 }
+
+/* FORM 3 */
+.forgotPass_form3,
+.forgotPass_form3 .verification_container {
+    height: 90%;
+}
+.forgotPass_form3 .verification_container .buttons_container {
+    top:30px;
+    height: auto;
+}
+.forgotPass_form3 .verification_container .buttons_container #next_button {
+    padding: 11.5px 20px;
+    width: 120px;
+}
