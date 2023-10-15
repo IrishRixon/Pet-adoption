@@ -10,7 +10,7 @@ signupBtn.addEventListener("click", function () {
         bodyOfLogin.style.display = "none";
         credentialsForm1.style.display = "block";
         bodyOfSignup.style.display = "block";
-        
+
         pageTitle.innerText = "Sign Up";
     }
 });
@@ -75,9 +75,9 @@ nextBtn.addEventListener('click', function () {
         accountSuccess.style.display = "flex";
         bodyOfSignup.style.display = "none";
 
-        setTimeout(function() {
+        setTimeout(function () {
             checkIcon.style.visibility = "visible";
-        },1000);
+        }, 1000);
 
         setTimeout(function () {
             currentPage = formPages[0];
@@ -112,8 +112,44 @@ incorrectEmailTxt.addEventListener('click', function () {
 });
 
 // FORGOT PASS
-searchBtn.addEventListener('click', function() {
-    forgotPassTitle.innerText = "We'll send a code to your email";
-    forgotPassTitle.style.fontSize = "28px";
-    forgotPassTitle.style.borderBottom = "1px solid #415A77";
+const forgotPassFormPage = ["Log In", "Find Account", "Send Code"];
+let forgotPassCurrentPage = forgotPassFormPage[0];
+
+forgotPassBtn.addEventListener('click', function(){
+    if(forgotPassCurrentPage == forgotPassFormPage[0]) {
+        forgotPassCurrentPage = forgotPassFormPage[1];
+        forgotPassOpenClose("open");
+    }
+});
+searchBtn.addEventListener('click', function () {
+    if (forgotPassCurrentPage == forgotPassFormPage[1]) {
+        forgotPassCurrentPage = forgotPassFormPage[2];
+
+        forgotPassTitle.innerText = "We'll send a code to your email";
+        forgotPassTitle.style.fontSize = "28px";
+        forgotPassTitle.style.borderBottom = "1px solid #415A77";
+        forgotPassForm1.style.display = "none";
+        forgotPassForm2.style.display = "flex";
+    }
+
+});
+
+cancelBtn.addEventListener('click', function() {
+    cardContainer.className = "col-4";
+    bodyOfLogin.style.display = "block";
+    bodyOfForgotPass.style.display = "none";
+    pageTitle.innerText = "Log In";
+    cardContainer.style.height = "460px";
+});
+
+notYouBtn.addEventListener('click', function() {
+    if(forgotPassCurrentPage == forgotPassFormPage[2]) {
+        forgotPassCurrentPage = forgotPassFormPage[1];
+
+        forgotPassTitle.innerText = "Find Your Account";
+        forgotPassTitle.style.fontSize = "35px";
+        forgotPassTitle.style.borderBottom = "0 solid #415A77";
+        forgotPassForm1.style.display = "block";
+        forgotPassForm2.style.display = "none";
+    }
 });

@@ -16,6 +16,8 @@
     />
     <link rel="stylesheet" href="LogIn.css" />
     <link rel="stylesheet" href="SignUp.css" />
+    <link rel="stylesheet" href="forgotPass.css" />
+
   </head>
 
   <body>
@@ -30,9 +32,9 @@
 
       <div class="wrapper row">
         <!-- CARD CONTAINER START-->
-        <div id="card_container" class="col-6">
+        <div id="card_container" class="col-4">
           <!-- BODY OF LOG IN STARTS -->
-          <div class="body_of_login d-none">
+          <div class="body_of_login">
             <header class="login_title">
               <h3>Log In</h3>
             </header>
@@ -61,7 +63,7 @@
                     </div>
 
                     <div class="forgotpass_button">
-                      <a href="#">Forgot Password?</a>
+                      <button id="forgotPassBtn" type="button">Forgot Password?</button>
                     </div>
                   </div>
                   <div class="signUp_button">
@@ -75,7 +77,7 @@
           <!-- BODY OF LOG IN ENDS -->
 
           <!-- ========== BODY SIGN UP START ========== -->
-          <form action="#" id="signupForm" class="d-none">
+          <form action="#" id="signupForm" class="">
             <div class="body_of_signup">
               <!-- TITLE START -->
               <header class="signup_title">
@@ -332,14 +334,14 @@
               </div>
               <!-- CREDENTIALS_BUTTONS ENDS -->
             </div>
+            <!-- ACCOUNT CREATED SUCCESSFULLY STARTS -->
+            <div class="accountCreated_container">
+              <span id="accountCreatedText">Account successfully created!</span>
+              <span id="checkIcon" class="material-icons"> check_circle </span>
+            </div>
+            <!-- ACCOUNT CREATED SUCCESSFULLY ENDS -->
           </form>
 
-          <!-- ACCOUNT CREATED SUCCESSFULLY STARTS -->
-          <div class="accountCreated_container">
-            <span id="accountCreatedText">Account successfully created!</span>
-            <span id="checkIcon" class="material-icons"> check_circle </span>
-          </div>
-          <!-- ACCOUNT CREATED SUCCESSFULLY ENDS -->
           <!-- ========== BODY SIGN UP END ========== -->
 
           <!-- ========== FORGOT PASSWORD STARTS ========== -->
@@ -349,7 +351,7 @@
             </header>
 
             <!-- FORM 1 -->
-            <div class="forgotPass_form1 d-none">
+            <div class="forgotPass_form1">
               <p>Please enter your email to search your account.</p>
               <div class="inputEmail_container">
                 <input type="text" required />
@@ -362,7 +364,7 @@
               </div>
             </div>
             <!-- FORM 2 -->
-            <div class="forgotPass_form2">
+            <div class="forgotPass_form2 m-auto">
               <div class="text">
                 <span>We can send email to:</span>
                 <span id="spanEmail">Loremipsum@gmail.com</span>
@@ -376,13 +378,13 @@
                 </div>
 
                 <div class="notYouBtn">
-                  <button type="button">Not you?</button>
+                  <button id="notYouBtn" type="button">Not you?</button>
                 </div>
               </div>
 
               <div class="form2Buttons_container">
-                <button type="button">Log In using password</button>
-                <button type="button">Continue</button>
+                <button id="loginPass" type="button">Log In using password</button>
+                <button id="continueBtn" type="button">Continue</button>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 const daysInput = document.querySelector('#daysInput'),
     daysList = document.querySelector("#dayslist"),
     errorForDays = document.querySelector("#error_for_days"),
-    
+
     // MONTH CONTAINER AND ITS CHILDREN
     monthsContainer = document.querySelector(".months_container"),
     month = monthsContainer.querySelector("#month_input"),
@@ -35,8 +35,25 @@ const daysInput = document.querySelector('#daysInput'),
     buttonsContainer = document.querySelector(".buttons_container"),
     accountSuccess = document.querySelector(".accountCreated_container"),
     checkIcon = document.querySelector("#checkIcon"),
-    
+
     // FORGOT PASS
+    forgotPassBtn = document.querySelector("#forgotPassBtn"),
     cancelBtn = document.querySelector("#cancelBtn"),
     searchBtn = document.querySelector("#searchBtn"),
-    forgotPassTitle = document.querySelector("#forgotPass_titleTxt");
+    bodyOfForgotPass = document.querySelector(".body_of_forgotPass"),
+    forgotPassTitle = document.querySelector("#forgotPass_titleTxt"),
+    forgotPassForm1 = document.querySelector(".forgotPass_form1"),
+    forgotPassForm2 = document.querySelector(".forgotPass_form2"),
+    notYouBtn = document.querySelector("#notYouBtn"),
+    signupForm = document.querySelector("#signupForm");
+
+function forgotPassOpenClose(status) {
+    if (status == "open") {
+        bodyOfLogin.style.display = "none";
+        bodyOfForgotPass.style.display = "block";
+        cardContainer.style.height = "328px";
+        cardContainer.className = "col-6";
+        forgotPassForm1.style.display = "block";
+        signupForm.style.display = "none";
+    }
+}
