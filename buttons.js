@@ -61,7 +61,7 @@ nextBtn.addEventListener('click', function () {
         cardContainer.style.height = "381px";
         signupTitleTxt.innerText = "Enter Verification Code";
         credentialsForm3.style.display = "none";
-        verificationContainer.style.display = "block";
+        verificationContainerOfSignUp.style.display = "block";
         backBtn.style.display = "none";
         nextBtn.innerText = "Verify";
         buttonsContainer.style.gap = "0";
@@ -87,7 +87,7 @@ nextBtn.addEventListener('click', function () {
             bodyOfLogin.style.display = "block";
             pageTitle.innerText = "Log In";
             cardContainer.style.height = "460px";
-            verificationContainer.style.display = "none";
+            verificationContainerOfSignUp.style.display = "none";
             backBtn.style.display = "block";
             nextBtn.innerText = "Next";
             buttonsContainer.style.gap = "123px";
@@ -105,7 +105,7 @@ incorrectEmailTxt.addEventListener('click', function () {
         cardContainer.style.height = "434.014px";
         signupTitleTxt.innerText = "Sign Up";
         credentialsForm3.style.display = "flex";
-        verificationContainer.style.display = "none";
+        verificationContainerOfSignUp.style.display = "none";
         backBtn.style.display = "block";
         nextBtn.innerText = "Next";
         buttonsContainer.style.gap = "123px";
@@ -115,7 +115,7 @@ incorrectEmailTxt.addEventListener('click', function () {
 
 // FORGOT PASS
 const forgotPassFormPage = ["Log In", "Find Account", "Send Code", "Enter Code"];
-let forgotPassCurrentPage = forgotPassFormPage[3];
+let forgotPassCurrentPage = forgotPassFormPage[0];
 
 //LOG IN FORM
 forgotPassBtn.addEventListener('click', function () {
@@ -174,6 +174,7 @@ continueBtn.addEventListener('click', function () {
         forgotPassForm3.style.display = "block";
         forgotPassTitle.style.borderBottom = "none";
         cardContainer.style.height = "381px";
+        verificationContainerOfForgotPass.style.display = "block";
 
     }
 });
@@ -200,4 +201,11 @@ forgotIncorrectEmailTxt.addEventListener('click', function() {
 forgotCancelBtn.addEventListener('click', function() {
     forgotPassOpenClose("close");
     logInOpenClose("open");
+});
+
+forgotContinueBtn.addEventListener('click', function() {
+    forgotPassForm3.style.display = "none";
+    forgotPassForm4.style.display = "block";
+    cardContainer.style.height = "340px";
+    forgotPassTitle.innerText = "Enter New Password";
 });

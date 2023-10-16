@@ -30,7 +30,7 @@ const daysInput = document.querySelector('#daysInput'),
     credentialsForm2 = document.querySelector(".credentials_form2"),
     credentialsForm3 = document.querySelector(".credentials_form3"),
     signupTitleTxt = document.querySelector("#signup_titleTxt"),
-    verificationContainer = document.querySelector(".verification_container"),
+    verificationContainerOfSignUp = document.querySelector(".verification_container.ofSignup"),
     incorrectEmailTxt = document.querySelector("#incorrectEmailTxt"),
     buttonsContainer = document.querySelector(".buttons_container"),
     accountSuccess = document.querySelector(".accountCreated_container"),
@@ -46,13 +46,15 @@ const daysInput = document.querySelector('#daysInput'),
     forgotPassForm1 = document.querySelector(".forgotPass_form1"),
     forgotPassForm2 = document.querySelector(".forgotPass_form2"),
     forgotPassForm3 = document.querySelector(".forgotPass_form3"),
+    forgotPassForm4 = document.querySelector(".forgotPass_form4"),
     notYouBtn = document.querySelector("#notYouBtn"),
     signupForm = document.querySelector("#signupForm"),
     loginUsingPassword = document.querySelector("#loginPass"),
     forgotIncorrectEmailTxt = document.querySelector("#forgotIncorrectEmailTxt"),
     forgotCancelBtn = document.querySelector("#forgotCancelBtn"),
-    forgotContinueBtn = document.querySelector("#forgotContinueBtn");
-
+    forgotContinueBtn = document.querySelector("#forgotContinueBtn"),
+    verificationContainerOfForgotPass = document.querySelector(".verification_container.ofForgotPass");
+    
 
 function forgotPassOpenClose(status) {
     if (status == "open") {
