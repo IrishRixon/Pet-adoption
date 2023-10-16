@@ -117,13 +117,18 @@ incorrectEmailTxt.addEventListener('click', function () {
 const forgotPassFormPage = ["Log In", "Find Account", "Send Code", "Enter Code"];
 let forgotPassCurrentPage = forgotPassFormPage[3];
 
+//LOG IN FORM
 forgotPassBtn.addEventListener('click', function () {
     if (forgotPassCurrentPage == forgotPassFormPage[0]) {
         forgotPassCurrentPage = forgotPassFormPage[1];
+
+        bodyOfLogin.style.display = "none";
+        signupForm.style.display = "none";
         forgotPassOpenClose("open");
     }
 });
 
+//FORM 1
 searchBtn.addEventListener('click', function () {
     if (forgotPassCurrentPage == forgotPassFormPage[1]) {
         forgotPassCurrentPage = forgotPassFormPage[2];
@@ -147,6 +152,7 @@ cancelBtn.addEventListener('click', function () {
     cardContainer.style.height = "460px";
 });
 
+//FORM 2
 notYouBtn.addEventListener('click', function () {
     if (forgotPassCurrentPage == forgotPassFormPage[2]) {
         forgotPassCurrentPage = forgotPassFormPage[1];
@@ -159,11 +165,6 @@ notYouBtn.addEventListener('click', function () {
     }
 });
 
-loginUsingPassword.addEventListener('click', function () {
-    logInOpenClose('open');
-    bodyOfForgotPass.style.display = "none";
-});
-
 continueBtn.addEventListener('click', function () {
     if (forgotPassCurrentPage == forgotPassFormPage[2]) {
         forgotPassCurrentPage = forgotPassFormPage[3];
@@ -171,9 +172,18 @@ continueBtn.addEventListener('click', function () {
         forgotPassTitle.innerText = "Enter Code";
         forgotPassForm2.style.display = "none";
         forgotPassForm3.style.display = "block";
+        forgotPassTitle.style.borderBottom = "none";
+        cardContainer.style.height = "381px";
+
     }
 });
 
+loginUsingPassword.addEventListener('click', function () {
+    logInOpenClose('open');
+    bodyOfForgotPass.style.display = "none";
+});
+
+// FORM 3
 forgotIncorrectEmailTxt.addEventListener('click', function() {
     if(forgotPassCurrentPage == forgotPassFormPage[3]) {
         forgotPassCurrentPage = forgotPassFormPage[2];
@@ -183,5 +193,11 @@ forgotIncorrectEmailTxt.addEventListener('click', function() {
         forgotPassTitle.style.borderBottom = "1px solid #415A77";
         forgotPassForm3.style.display = "none";
         forgotPassForm2.style.display = "flex";
+        cardContainer.style.height = "328px";
     }
+});
+
+forgotCancelBtn.addEventListener('click', function() {
+    forgotPassOpenClose("close");
+    logInOpenClose("open");
 });

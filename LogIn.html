@@ -390,7 +390,7 @@
             </div>
 
             <!-- FORM 3 -->
-            <div class="forgotPass_form3">
+            <div class="forgotPass_form3 d-none">
               <div class="verification_container">
                 <div class="verificationTxt_container">
                   <p>We've sent the verification code to email:</p>
@@ -409,15 +409,28 @@
 
                 <div class="buttons_container">
                   <div class="back_container">
-                    <button id="back_button">Cancel</button>
+                    <button id="forgotCancelBtn">Cancel</button>
                   </div>
 
                   <div class="next_container">
-                    <button id="next_button">Continue</button>
+                    <button id="forgotContinueBtn">Continue</button>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- FORM 4 -->
+            <div class="forgotPass_form3">
+              <div class="forgotCredentialsAndButtons">
+                <div class="forgotCredentials">
+                  <input type="text" required>
+                  <label>Enter new password</label>
+                  <input type="text" required>
+                  <label>Confirm password</label>
+                </div>
+              </div>
+            </div>
+
           </div>
           <!-- ========== FORGOT PASSWORD ENDS ========== -->
         </div>

@@ -49,17 +49,24 @@ const daysInput = document.querySelector('#daysInput'),
     notYouBtn = document.querySelector("#notYouBtn"),
     signupForm = document.querySelector("#signupForm"),
     loginUsingPassword = document.querySelector("#loginPass"),
-    forgotIncorrectEmailTxt = document.querySelector("#forgotIncorrectEmailTxt");
+    forgotIncorrectEmailTxt = document.querySelector("#forgotIncorrectEmailTxt"),
+    forgotCancelBtn = document.querySelector("#forgotCancelBtn"),
+    forgotContinueBtn = document.querySelector("#forgotContinueBtn");
 
 
 function forgotPassOpenClose(status) {
     if (status == "open") {
-        bodyOfLogin.style.display = "none";
         bodyOfForgotPass.style.display = "block";
         cardContainer.style.height = "328px";
         cardContainer.className = "col-6";
         forgotPassForm1.style.display = "block";
-        signupForm.style.display = "none";
+    }
+
+    else if(status == "close") {
+        cardContainer.className = "col-4";
+        cardContainer.style.height = "464px";
+        bodyOfForgotPass.style.display = "none";
+        forgotPassForm1.style.display = "none";
     }
 }
 

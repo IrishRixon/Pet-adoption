@@ -167,7 +167,20 @@
     top:30px;
     height: auto;
 }
-.forgotPass_form3 .verification_container .buttons_container #next_button {
+.forgotPass_form3 .verification_container .buttons_container #forgotContinueBtn,
+.forgotPass_form3 .verification_container .buttons_container #forgotCancelBtn {
     padding: 11.5px 20px;
     width: 120px;
+    border-radius: 25.185px;
+    border: 2px solid ;
+    background: var(--10-darker, #415A77);
+    color: var(--60, #E0E1DD);
+    font-size: 19.843px;
+}
+#forgotContinueBtn {
+    background: var(--30-light, #1B263B) !important;
+}
+
+#forgotContinueBtn:hover, #forgotCancelBtn:hover {
+    cursor: pointer;
 }
