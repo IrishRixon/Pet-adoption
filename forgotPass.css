@@ -1,0 +1,260 @@
+/* FORM 1*/
+.body_of_forgotPass {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.forgotPass_title h3 {
+    font-family: Nunito;
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+}
+.forgotPass_form1 {
+    margin-top: 24px;
+    display: none;
+}
+.forgotPass_form1 p {
+    font-family: Roboto;
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.forgotPass_form1 .inputEmail_container {
+    position: relative;
+}
+.forgotPass_form1 .inputEmail_container input {
+    border-radius: 23.557px;
+    background: #D9D9D9;
+    border: 2px solid var(--30-light, #1B263B);
+    padding: 10.289px 10px 14.289px 19.643px;
+    width:100%;
+}
+.forgotPass_form1 .inputEmail_container label {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    font-size: 19.843px;
+    opacity: 50%;
+    display: flex;
+    transition: 0.5s;
+}
+.buttons_of_forgotPass {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    display: flex;
+    gap: 14px;
+}
+.buttons_of_forgotPass button {
+    background: var(--10-darker, #415A77);
+    border-radius: 25.185px;
+    border: 26px;
+    padding: 7.632px 2px;
+    height: 46px;
+    width: 130px;
+    color: var(--60, #E0E1DD);
+    font-size: 19.843px;
+    font-family: Roboto;
+}
+.buttons_of_forgotPass #searchBtn {
+    background: var(--30-light, #1B263B);
+}
+.buttons_of_forgotPass button:hover {
+    cursor: pointer;
+}
+.forgotPass_form1 .inputEmail_container input:focus~label,
+.forgotPass_form1 .inputEmail_container input:valid~label {
+    padding: 0 10px;
+    background-color: #D9D9D9;
+    transform: translateX(-10px) translateY(-24px) scale(0.7);
+    opacity: 100%;
+    display: flex;
+}
+
+
+/* FORM 2 FORGET PASS */
+.forgotPass_form2 {
+    width: 80%;
+    margin-top: 10px;
+    gap: 15px;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+}
+.forgotPass_form2 .text span {
+    font-family: Roboto;
+    font-size: 15px;
+    color: var(--30-light, #1B263B);
+}
+.forgotPass_form2 .text #spanEmail {
+    font-weight: bold;
+}
+.forgotPass_form2 .accountToDisplay_container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.forgotPass_form2 .accountToDisplay_container .image_container {
+    background: url("../images/defaultpic.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+}
+.accountName span {
+    font-size: 19.843px;
+    font-weight: 600;
+}
+.notYouBtn button {
+    border: none;
+    background: transparent;
+    color: var(--10-darker, #415A77);
+}
+.form2Buttons_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -20px;
+}
+.form2Buttons_container #continueBtn {
+    width: 130px;
+    background: var(--30-light, #1B263B);
+    border-radius: 25.185px;
+    border: 2px solid;
+    color: var(--60, #E0E1DD);
+    padding: 11.5px 26px;
+    font-size: 19.843px;
+}
+.form2Buttons_container #loginPass {
+    border: none;
+    background: transparent;
+    color: var(--10-darker, #415A77);
+}
+
+/* PSEUDO */
+.form2Buttons_container #continueBtn:hover {
+    cursor: pointer;
+}
+.form2Buttons_container #loginPass:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.form2Buttons_container #loginPass:focus {
+    outline: none;
+}
+.form2Buttons_container #loginPass:active {
+    color: #59789c;
+}
+.notYouBtn button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.notYouBtn button:focus {
+    outline: none;
+}
+.notYouBtn button:active {
+    color: #59789c;
+}
+
+/* FORM 3 */
+.verification_container.ofForgotPass {
+    display: none;
+}
+.forgotPass_form3,
+.forgotPass_form3 .verification_container {
+    height: 90%;
+}
+.forgotPass_form3 .verification_container .buttons_container {
+    top:30px;
+    height: auto;
+}
+.forgotPass_form3 .verification_container .buttons_container #forgotContinueBtn,
+.forgotPass_form3 .verification_container .buttons_container #forgotCancelBtn {
+    padding: 11.5px 20px;
+    width: 120px;
+    border-radius: 25.185px;
+    border: 2px solid ;
+    background: var(--10-darker, #415A77);
+    color: var(--60, #E0E1DD);
+    font-size: 19.843px;
+}
+#forgotContinueBtn {
+    background: var(--30-light, #1B263B) !important;
+}
+
+#forgotContinueBtn:hover, #forgotCancelBtn:hover {
+    cursor: pointer;
+}
+
+/* FORM 4 */
+.forgotPass_form4 {
+    margin-top:20px;
+    display: none;
+}
+.forgotPass_form4 .forgotCredentialsAndButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+.forgotPass_form4 .forgotCredentialsAndButtons  .forgotCredentials_form4 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.forgotCredentials_form4 .enterPass input,
+.forgotCredentials_form4 .confirmPass input {
+    border-radius: 23.557px;
+    border: 2px solid var(--30-light, #1B263B);
+    background: #D9D9D9;
+    padding: 10px 10px;
+    width: 100%;
+    font-size: 19.843px;
+    
+}
+.forgotCredentials_form4 .enterPass,
+.forgotCredentials_form4 .confirmPass {
+    position: relative;
+    width: 100%;
+}
+.forgotCredentials_form4 .enterPass label,
+.forgotCredentials_form4 .confirmPass label{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    opacity: 50%;
+    font-size: 19.843px;
+    transition: 0.5s;
+}
+
+
+.forgotCredentialsAndButtons .forgotButtons_form4_container {
+    display: flex;
+    justify-content: end;
+}
+.forgotCredentialsAndButtons .forgotButtons_form4_container button {
+    padding: 11.5px 26px;
+    border-radius: 26.185px;
+    border: 1px solid transparent;
+    font-size: 19.843px;
+    background: var(--30-light, #1B263B);
+    color: var(--60, #E0E1DD);
+}
+
+.forgotCredentials_form4 .enterPass input:focus~label,
+.forgotCredentials_form4 .confirmPass input:focus~label,
+.forgotCredentials_form4 .enterPass input:valid~label,
+.forgotCredentials_form4 .confirmPass input:valid~label {
+    display: flex;
+    background: #D9D9D9;
+    opacity: 100%;
+    padding: 0 10px;
+    transform: translateY(-20px) scale(0.7) translateX(-20px);
+}
+
+.forgotCredentialsAndButtons .forgotButtons_form4_container button:hover {
+    cursor: pointer;
+}
+
+

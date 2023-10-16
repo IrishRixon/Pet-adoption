@@ -61,7 +61,8 @@ body {
     background: #D9D9D9;
     box-shadow: -16.02683px -16.02683px 32.05365px 0px #FFF,
      16.02683px 16.02683px 32.05365px 0px #BABBB7;
-     transition: 0.5s;
+     transition: ease-in-out 0.5s;
+     overflow: hidden;
 }
 .body_of_login{
     /* display: none; */
@@ -98,6 +99,8 @@ body {
     left: 8%;
     font-size: 19.8px;
     transition: 0.5s;
+    color: var(--30-light, #1B263B);
+    opacity: 50%;
 }
 .credentials_login .email input,
 .credentials_login .password input {
@@ -127,6 +130,7 @@ body {
     display: flex;
     background-color: #D9D9D9;
     padding: 0 10px;
+    opacity: 100%;
 }
 .credentials_login .password input:focus~label,
 .credentials_login .password input:valid~label {
@@ -160,14 +164,23 @@ body {
 .forgotpass_button {
     text-align: center;
 }
-.forgotpass_button a{
+.forgotpass_button button{
     font-family: 'Roboto';
     font-size: 15px;
     font-weight: 400;
     color: #1B263B;
+    background-color: transparent;
+    border: none;
 }
-.forgotpass_button a:active {
+.forgotpass_button button:active {
     color: #415a88;
+}
+.forgotpass_button button:focus {
+    outline: none;
+}
+.forgotpass_button button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 .signUp_button {
     display: flex;
@@ -229,3 +242,6 @@ body {
 }
 /* RIGHT SIDE ENDS */
 
+/* #card_container {
+    height: 381px;
+} */

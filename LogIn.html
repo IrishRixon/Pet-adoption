@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log In</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="LogIn.css" />
-    <link rel="stylesheet" href="SignUp.css" />
-  </head>
 
-  <body>
-    <!-- LEFT CONTAINER STARTS-->
-    <div class="container">
-      <!-- HEADER LOGO CUTIEPETS START-->
-      <div class="logo col-3">
-        <img src="../images/Frame.png" alt="" />
-        <h2>cutiepets</h2>
-      </div>
-      <!-- HEADER LOGO CUTIEPETS END-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="LogIn.css" />
+  <link rel="stylesheet" href="SignUp.css" />
+  <link rel="stylesheet" href="forgotPass.css" />
 
-      <div class="wrapper row">
-        <!-- CARD CONTAINER START-->
-        <div id="card_container" class="col-4">
-          <!-- BODY OF LOG IN STARTS -->
-          <div class="body_of_login">
-            <header class="login_title">
-              <h3>Log In</h3>
-            </header>
+</head>
 
-            <!-- CREDENTIALS AND BUTTONS STARTS -->
+<body>
+  <!-- LEFT CONTAINER STARTS-->
+  <div class="container">
+    <!-- HEADER LOGO CUTIEPETS START-->
+    <div class="logo col-3">
+      <img src="../images/Frame.png" alt="" />
+      <h2>cutiepets</h2>
+    </div>
+    <!-- HEADER LOGO CUTIEPETS END-->
+
+    <div class="wrapper row">
+      <!-- CARD CONTAINER START-->
+      <div id="card_container" class="col-4">
+        <!-- BODY OF LOG IN STARTS -->
+        <div class="body_of_login">
+          <header class="login_title">
+            <h3>Log In</h3>
+          </header>
+
+          <!-- CREDENTIALS AND BUTTONS STARTS -->
+          <form action="#" id="loginForm">
             <div class="credentials_buttons">
               <div class="credentials_login">
                 <div class="email">
@@ -56,7 +57,7 @@
                   </div>
 
                   <div class="forgotpass_button">
-                    <a href="#">Forgot Password?</a>
+                    <button id="forgotPassBtn" type="button">Forgot Password?</button>
                   </div>
                 </div>
                 <div class="signUp_button">
@@ -64,11 +65,13 @@
                 </div>
               </div>
             </div>
-            <!-- CREDENTIALS AND BUTTONS ENDS -->
-          </div>
-          <!-- BODY OF LOG IN ENDS -->
+          </form>
+          <!-- CREDENTIALS AND BUTTONS ENDS -->
+        </div>
+        <!-- BODY OF LOG IN ENDS -->
 
-          <!-- ========== BODY SIGN UP START ========== -->
+        <!-- ========== BODY SIGN UP START ========== -->
+        <form action="#" id="signupForm" class="">
           <div class="body_of_signup">
             <!-- TITLE START -->
             <header class="signup_title">
@@ -99,12 +102,7 @@
                   <!-- MONTH -->
                   <div class="inputs_of_birthday">
                     <div class="months_container">
-                      <input
-                        id="month_input"
-                        type="text"
-                        list="months"
-                        required
-                      />
+                      <input id="month_input" type="text" list="months" required />
                       <label>Month</label>
                       <datalist id="months">
                         <option value="January">January</option>
@@ -127,13 +125,7 @@
                     <!-- DAYS -->
                     <div class="days_container">
                       <!-- MONTHS HAS 31 -->
-                      <input
-                        type="text"
-                        id="daysInput"
-                        list="dayslist"
-                        disabled="true"
-                        required
-                      />
+                      <input type="text" id="daysInput" list="dayslist" disabled="true" required />
                       <label>Days</label>
                       <datalist id="dayslist">
                         <option value="1">1</option>
@@ -172,12 +164,7 @@
                     </div>
 
                     <div class="years_container">
-                      <input
-                        type="text"
-                        id="yearInput"
-                        list="yearList"
-                        required
-                      />
+                      <input type="text" id="yearInput" list="yearList" required />
                       <label>Year</label>
                       <datalist id="yearList">
                         <option value="1990">1990</option>
@@ -288,24 +275,21 @@
               <!-- CREDENTIALS FORM 3 ENDS -->
 
               <!-- VERIFICATION CODE STARTS-->
-              <div class="verification_container">
+              <div class="verification_container ofSignup">
                 <div class="verificationTxt_container">
-                  <p>
-                    We've sent the verification code to email:
-                  </p>
-                  <span>Loremipsum@gmail.com</span
-                  ><a href="#" id="incorrectEmailTxt" >Incorrect email?</a>
+                  <p>We've sent the verification code to email:</p>
+                  <span>Loremipsum@gmail.com</span><a href="#" id="incorrectEmailTxt">Incorrect email?</a>
                 </div>
 
                 <div class="codeInput_container">
-                  <input type="text" required>
+                  <input type="text" required />
                 </div>
 
                 <div class="resendCode_container">
                   <span>Didn't get the code?</span><a href="#" class="resendCode">Click to resend.</a>
                 </div>
               </div>
-              <!-- VERIFICATION CODE ENDS-->
+              <!-- VERIFICATION CODE ENDS -->
 
               <!-- BUTTONS STARTS-->
               <div class="buttons_container">
@@ -321,20 +305,131 @@
             </div>
             <!-- CREDENTIALS_BUTTONS ENDS -->
           </div>
-          <!-- ========== BODY SIGN UP END ========== -->
-        </div>
-        <!-- CARD CONTAINER ENDS-->
-      </div>
-    </div>
-    <!-- LEFT CONTAINER ENDS-->
+          <!-- ACCOUNT CREATED SUCCESSFULLY STARTS -->
+          <div class="accountCreated_container signup">
+            <span id="accountCreatedText">Account successfully created!</span>
+            <span id="checkIcon" class="material-icons"> check_circle </span>
+          </div>
+          <!-- ACCOUNT CREATED SUCCESSFULLY ENDS -->
+        </form>
 
-    <!-- RIGHT SIDE STARTS -->
-    <div class="rightside">
-      <div class="image_container"></div>
+        <!-- ========== BODY SIGN UP END ========== -->
+
+        <!-- ========== FORGOT PASSWORD STARTS ========== -->
+        <div class="body_of_forgotPass">
+          <header class="forgotPass_title">
+            <h3 id="forgotPass_titleTxt">Find Your Account</h3>
+          </header>
+
+          <!-- FORM 1 -->
+          <div class="forgotPass_form1">
+            <p>Please enter your email to search your account.</p>
+            <div class="inputEmail_container">
+              <input type="text" required />
+              <label>Please enter email</label>
+            </div>
+
+            <div class="buttons_of_forgotPass">
+              <button id="cancelBtn">Cancel</button>
+              <button id="searchBtn">Search</button>
+            </div>
+          </div>
+
+          <!-- FORM 2 -->
+          <div class="forgotPass_form2 m-auto">
+            <div class="text">
+              <span>We can send email to:</span>
+              <span id="spanEmail">Loremipsum@gmail.com</span>
+            </div>
+
+            <div class="accountToDisplay_container">
+              <div class="image_container"></div>
+
+              <div class="accountName">
+                <span>Lorem ipsum</span>
+              </div>
+
+              <div class="notYouBtn">
+                <button id="notYouBtn" type="button">Not you?</button>
+              </div>
+            </div>
+
+            <div class="form2Buttons_container">
+              <button id="loginPass" type="button">Log In using password</button>
+              <button id="continueBtn" type="button">Continue</button>
+            </div>
+          </div>
+
+          <!-- FORM 3 -->
+          <div class="forgotPass_form3">
+            <div class="verification_container ofForgotPass">
+              <div class="verificationTxt_container">
+                <p>We've sent the verification code to email:</p>
+                <span>Loremipsum@gmail.com</span><a href="#" id="forgotIncorrectEmailTxt">Incorrect email?</a>
+              </div>
+
+              <div class="codeInput_container">
+                <input type="text" required />
+              </div>
+
+              <div class="resendCode_container">
+                <span>Didn't get the code?</span><a href="#" class="resendCode">Click to resend.</a>
+              </div>
+
+              <div class="buttons_container">
+                <div class="back_container">
+                  <button id="forgotCancelBtn">Cancel</button>
+                </div>
+
+                <div class="next_container">
+                  <button id="forgotContinueBtn">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM 4 -->
+          <div class="forgotPass_form4">
+            <div class="forgotCredentialsAndButtons">
+              <div class="forgotCredentials_form4">
+                <div class="enterPass">
+                  <input type="password" required>
+                  <label>Enter new password</label>
+                </div>
+
+                <div class="confirmPass">
+                  <input type="password" required>
+                  <label>Confirm password</label>
+                </div>
+              </div>
+
+              <div class="forgotButtons_form4_container">
+                <button id="forgotDoneBtn" type="submit">Done</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASSWORD SUCCESSFULLY UPDATED -->
+          <div class="accountCreated_container forgotPass">
+            <span id="accountCreatedText">Password successfully created!</span>
+            <span id="checkIconForgotPass" class="material-icons"> check_circle </span>
+          </div>
+        </div>
+        <!-- ========== FORGOT PASSWORD ENDS ========== -->
+      </div>
+      <!-- CARD CONTAINER ENDS-->
     </div>
-    <!-- RIGHT SIDE ENDS -->
-  </body>
-  <script src="Main.js"></script>
-  <script src="Days algo and errorMsg.js"></script>
-  <script src="buttons.js"></script>
+  </div>
+  <!-- LEFT CONTAINER ENDS-->
+
+  <!-- RIGHT SIDE STARTS -->
+  <div class="rightside">
+    <div class="image_container"></div>
+  </div>
+  <!-- RIGHT SIDE ENDS -->
+</body>
+<script src="Main.js"></script>
+<script src="Days algo and errorMsg.js"></script>
+<script src="buttons.js"></script>
+
 </html>
