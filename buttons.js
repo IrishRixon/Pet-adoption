@@ -72,7 +72,7 @@ nextBtn.addEventListener('click', function () {
         currentPage = formPages[5];
 
         cardContainer.style.height = "120px";
-        accountSuccess.style.display = "flex";
+        accountSuccessSignup.style.display = "flex";
         bodyOfSignup.style.display = "none";
 
         setTimeout(function () {
@@ -82,7 +82,7 @@ nextBtn.addEventListener('click', function () {
         setTimeout(function () {
             currentPage = formPages[0];
 
-            accountSuccess.style.display = "none";
+            accountSuccessSignup.style.display = "none";
             cardContainer.className = "col-4";
             bodyOfLogin.style.display = "block";
             pageTitle.innerText = "Log In";
@@ -114,31 +114,31 @@ incorrectEmailTxt.addEventListener('click', function () {
 });
 
 // FORGOT PASS
-const forgotPassFormPage = ["Log In", "Find Account", "Send Code", "Enter Code"];
-let forgotPassCurrentPage = forgotPassFormPage[0];
+// const forgotPassFormPage = ["Log In", "Find Account", "Send Code", "Enter Code"];
+// let forgotPassCurrentPage = forgotPassFormPage[0];
 
 //LOG IN FORM
 forgotPassBtn.addEventListener('click', function () {
-    if (forgotPassCurrentPage == forgotPassFormPage[0]) {
-        forgotPassCurrentPage = forgotPassFormPage[1];
+    // if (forgotPassCurrentPage == forgotPassFormPage[0]) {
+        // forgotPassCurrentPage = forgotPassFormPage[1];
+    // }
 
-        bodyOfLogin.style.display = "none";
-        signupForm.style.display = "none";
-        forgotPassOpenClose("open");
-    }
+    bodyOfLogin.style.display = "none";
+    signupForm.style.display = "none";
+    forgotPassOpenClose("open");
 });
 
 //FORM 1
 searchBtn.addEventListener('click', function () {
-    if (forgotPassCurrentPage == forgotPassFormPage[1]) {
-        forgotPassCurrentPage = forgotPassFormPage[2];
+    // if (forgotPassCurrentPage == forgotPassFormPage[1]) {
+    //     forgotPassCurrentPage = forgotPassFormPage[2];
 
-        forgotPassTitle.innerText = "We'll send a code to your email";
-        forgotPassTitle.style.fontSize = "28px";
-        forgotPassTitle.style.borderBottom = "1px solid #415A77";
-        forgotPassForm1.style.display = "none";
-        forgotPassForm2.style.display = "flex";
-    }
+    // }
+    forgotPassTitle.innerText = "We'll send a code to your email";
+    forgotPassTitle.style.fontSize = "28px";
+    forgotPassTitle.style.borderBottom = "1px solid #415A77";
+    forgotPassForm1.style.display = "none";
+    forgotPassForm2.style.display = "flex";
 
 });
 
@@ -154,29 +154,28 @@ cancelBtn.addEventListener('click', function () {
 
 //FORM 2
 notYouBtn.addEventListener('click', function () {
-    if (forgotPassCurrentPage == forgotPassFormPage[2]) {
-        forgotPassCurrentPage = forgotPassFormPage[1];
+    // if (forgotPassCurrentPage == forgotPassFormPage[2]) {
+    //     forgotPassCurrentPage = forgotPassFormPage[1];
 
-        forgotPassTitle.innerText = "Find Your Account";
-        forgotPassTitle.style.fontSize = "35px";
-        forgotPassTitle.style.borderBottom = "0 solid #415A77";
-        forgotPassForm1.style.display = "block";
-        forgotPassForm2.style.display = "none";
-    }
+    // };
+    forgotPassTitle.innerText = "Find Your Account";
+    forgotPassTitle.style.fontSize = "35px";
+    forgotPassTitle.style.borderBottom = "0 solid #415A77";
+    forgotPassForm1.style.display = "block";
+    forgotPassForm2.style.display = "none";
 });
 
 continueBtn.addEventListener('click', function () {
-    if (forgotPassCurrentPage == forgotPassFormPage[2]) {
-        forgotPassCurrentPage = forgotPassFormPage[3];
+    // if (forgotPassCurrentPage == forgotPassFormPage[2]) {
+    //     forgotPassCurrentPage = forgotPassFormPage[3];
+    // }
 
-        forgotPassTitle.innerText = "Enter Code";
-        forgotPassForm2.style.display = "none";
-        forgotPassForm3.style.display = "block";
-        forgotPassTitle.style.borderBottom = "none";
-        cardContainer.style.height = "381px";
-        verificationContainerOfForgotPass.style.display = "block";
-
-    }
+    forgotPassTitle.innerText = "Enter Code";
+    forgotPassForm2.style.display = "none";
+    forgotPassForm3.style.display = "block";
+    forgotPassTitle.style.borderBottom = "none";
+    cardContainer.style.height = "381px";
+    verificationContainerOfForgotPass.style.display = "block";
 });
 
 loginUsingPassword.addEventListener('click', function () {
@@ -198,6 +197,7 @@ forgotIncorrectEmailTxt.addEventListener('click', function() {
     }
 });
 
+//FORM 4
 forgotCancelBtn.addEventListener('click', function() {
     forgotPassOpenClose("close");
     logInOpenClose("open");
@@ -208,4 +208,30 @@ forgotContinueBtn.addEventListener('click', function() {
     forgotPassForm4.style.display = "block";
     cardContainer.style.height = "340px";
     forgotPassTitle.innerText = "Enter New Password";
+});
+
+forgotDoneBtn.addEventListener('click', function() {
+    forgotPassForm4.style.display = "none";
+    accountSuccessForgotPass.style.display = "flex";
+    cardContainer.style.height = "120px";
+    forgotPassTitle.style.display = "none";
+
+    setTimeout(function () {
+        checkIconForgotPass.style.visibility = "visible";
+    }, 1000);
+
+    setTimeout(function () {
+
+        accountSuccessForgotPass.style.display = "none";
+        cardContainer.className = "col-4";
+        bodyOfLogin.style.display = "block";
+        pageTitle.innerText = "Log In";
+        cardContainer.style.height = "460px";
+        verificationContainerOfForgotPass.style.display = "none";
+        bodyOfForgotPass.style.display = "none";
+        checkIconForgotPass.style.visibility = "hidden";
+        accountCreatedText.style.fontSize = "20px";
+        forgotPassTitle.style.display = "block";
+        
+    }, 3500);
 });

@@ -253,4 +253,8 @@
     transform: translateY(-20px) scale(0.7) translateX(-20px);
 }
 
+.forgotCredentialsAndButtons .forgotButtons_form4_container button:hover {
+    cursor: pointer;
+}
+
 

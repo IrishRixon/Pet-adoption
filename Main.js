@@ -33,7 +33,7 @@ const daysInput = document.querySelector('#daysInput'),
     verificationContainerOfSignUp = document.querySelector(".verification_container.ofSignup"),
     incorrectEmailTxt = document.querySelector("#incorrectEmailTxt"),
     buttonsContainer = document.querySelector(".buttons_container"),
-    accountSuccess = document.querySelector(".accountCreated_container"),
+    accountSuccessSignup = document.querySelector(".accountCreated_container.signup"),
     checkIcon = document.querySelector("#checkIcon"),
 
     // FORGOT PASS
@@ -53,7 +53,11 @@ const daysInput = document.querySelector('#daysInput'),
     forgotIncorrectEmailTxt = document.querySelector("#forgotIncorrectEmailTxt"),
     forgotCancelBtn = document.querySelector("#forgotCancelBtn"),
     forgotContinueBtn = document.querySelector("#forgotContinueBtn"),
-    verificationContainerOfForgotPass = document.querySelector(".verification_container.ofForgotPass");
+    verificationContainerOfForgotPass = document.querySelector(".verification_container.ofForgotPass"),
+    forgotDoneBtn = document.querySelector("#forgotDoneBtn"),
+    accountSuccessForgotPass = document.querySelector(".accountCreated_container.forgotPass"),
+    checkIconForgotPass = document.querySelector("#checkIconForgotPass"),
+    accountCreatedText = document.querySelector("#accountCreatedText");
     
 
 function forgotPassOpenClose(status) {
