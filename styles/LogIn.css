@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Nunito';
-    src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+    src: url('../Assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('../Assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Jomhuria';
-    src: url('../fonts/Jomhuria-Regular.ttf') format('truetype');
+    src: url('../Assets/fonts/Jomhuria-Regular.ttf') format('truetype');
 }
 
 * {
@@ -226,7 +226,7 @@ body {
 .rightside .image_container {
     width: 690px;
     height: 622px;
-    background-image: url('../images/image1.jpg');
+    background-image: url('../Assets/images/image1.jpg');
     background-repeat: no-repeat;
     background-position-x: 60%;
     background-size: cover;
@@ -238,7 +238,7 @@ body {
     transition: ease-in-out 0.5s;
 }
 .image_container:hover {
-    background-image: url('../images/image2.jpg');
+    background-image: url('../Assets/images/image2.jpg');
 }
 /* RIGHT SIDE ENDS */
 
