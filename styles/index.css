@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../Assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('../Assets/fonts/Jomhuria-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+/***** NAV BAR *****/
+.nav_bar {
+    background: var(--30-darker, #0D1B2A);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+.logo_container img {
+    width: 39px;
+    height: 47px;
+    color: #778DA9;
+}
+.logo_container h2 {
+    font-family: 'Jomhuria';
+    font-size: 40px;
+    color: var(--10-light, #778DA9);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.options .options_btns {
+    display: flex;
+    list-style: none;
+    color: var(--60, #E0E1DD);
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+.options .options_btns li {
+    display: block;
+    padding: 20px 10px;
+    font-family: Roboto;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.options .options_btns li:hover {
+    cursor: pointer;
+}
+.options .options_btns:first-child {
+    color: var(--10-light, #778DA9);
+}
+
+/***** End NAV BAR *****/
