@@ -1,3 +1,1 @@
-body of log in,
-credentials_form1,
-credentials_form2
+try using switch in js and make it function

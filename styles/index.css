@@ -86,6 +86,7 @@ body {
 
 /***** End NAV BAR *****/
 
+
 /***** 1ST SECTION *****/
 .first_section {
     width: 100%;
@@ -104,7 +105,7 @@ body {
     justify-content: center;
 }
 .corgi_text_container {
-    width: 785px;
+    width: 59.54%;
     display: flex;
     align-items: center;
     color: var(--60, #E0E1DD);
@@ -114,6 +115,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    width: 50%;
 }
 .corgi_text_container .text h4{
     font-family: Nunito;
@@ -126,8 +128,44 @@ body {
     font-size: 19.843px;
     text-align: end;
 }
+.corgi_text_container .corgi {
+    width: 50%;
+}
 .corgi_text_container .corgi img {
+    width: 100%;
     position: relative;
     bottom: -30px;
 }
 /***** End 1ST SECTION *****/
+
+
+/***** 2ND SECTION *****/
+.second_section .container {
+    height: 443px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second_section .container .icons_container {
+    display: flex;
+    width:718px;
+    height:175px;
+    gap: 93px;
+}
+.second_section .container .icons_container li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.second_section .container .icons_container li span{
+    color: #0D1B2A;
+    font-family: Roboto;
+    font-size: 19.843px;
+    text-align: center;
+}
+.second_section .container .icons_container li img {
+    display: block;
+}
+/***** End 2ND SECTION *****/
