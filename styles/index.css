@@ -172,5 +172,9 @@ body {
 
 .third_section {
     height: 322px;
-    
+    position: relative;
+}
+#right_container {
+    position: absolute;
+    top: 0;
 }
