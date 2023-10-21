@@ -91,6 +91,7 @@ body {
 .first_section {
     width: 100%;
     position: relative;
+    background: var(--60, #E0E1DD);
 }
 .first_section svg{
     width: 100%;
@@ -140,6 +141,9 @@ body {
 
 
 /***** 2ND SECTION *****/
+.second_section {
+    background: var(--60, #E0E1DD);
+}
 .second_section .container {
     height: 443px;
     display: flex;
@@ -172,6 +176,7 @@ body {
 
 .third_section {
     position: relative;
+    background: var(--60, #E0E1DD);
 }
 .third_section .right_container {
     width: 41.75%;
@@ -192,16 +197,113 @@ body {
     justify-content: flex-start;
     position: absolute;
     justify-content: center;
+    padding: 0px 30px;
 }
 .third_section .right_container .text h4 {
     margin: 0;
     color: var(--60, #E0E1DD);
     font-family: Nunito;
-    font-size: 4vmin;
+    font-size: 2.5vw;
     font-weight: 700;
 }
 .third_section .right_container .text span {
     font-family: Roboto;
-    font-size: 3vmin;
+    font-size: 1.5vw;
     color: var(--60, #E0E1DD);
 }
+
+/***** 4TH SECTION *****/
+ul {
+    padding: 0;
+}
+ul li{
+    list-style: none !important;
+    padding: none !important;
+}
+.fourth_section {
+    height: 724px;
+    display: flex;
+    align-items: center;
+    background: var(--60, #E0E1DD);
+    
+}
+.fourth_section .container header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.fourth_section .container header h4 {
+    font-family: Nunito;
+    color: var(--30-darker, #0D1B2A);
+    font-size: 35px;
+}
+.pets_section.row {
+    height: 429px;
+    display: flex;
+}
+.pet.col-3 .pet_image{
+    background: url('../Assets/images/Dog1.jpg') no-repeat center center / cover;
+    border-radius: 5px;
+    height: 261px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.pet.col-3 .pet_name,
+.pet.col-3 .pet_breed,
+.pet.col-3 .pet_location,
+.pet_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pet.col-3 .pet_name  h5{
+    font-family: Nunito;
+    color: var(--30-darker, #0D1B2A);
+    font-size: 35px;
+    font-weight: 700;
+}
+i {
+    height: 24px;
+    width: 24px;
+}
+.pet_breed span {
+    font-family: Roboto;
+    font-size: 20px;
+    color: var(--30-light, #1B263B);
+}
+.pet_location span {
+    color: var(--30-light, #1B263B);
+    font-family: Roboto;
+    font-size: 20px;
+}
+.pet_button a{
+    text-decoration: none;
+    font-family: Roboto;
+    color: var(--60, #E0E1DD);
+    background: var(--10-darker, #415A77);
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+footer {
+    height: 50px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+}
+footer a {
+    display: flex;
+    font-family: Roboto;
+    font-size: 20px;
+    text-decoration: none;
+    color: #415A77;
+    border: 2px solid #415A77;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: content-box;
+    padding: 15px 35px;
+    align-items: center;
+}
+/***** End 4TH SECTION *****/
