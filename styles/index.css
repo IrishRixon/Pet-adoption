@@ -225,7 +225,6 @@ ul li{
     display: flex;
     align-items: center;
     background: var(--60, #E0E1DD);
-    
 }
 .fourth_section .container header {
     display: flex;
@@ -307,3 +306,10 @@ footer a {
     align-items: center;
 }
 /***** End 4TH SECTION *****/
+
+
+/***** 5TH SECTION *****/
+.fifth_section {
+    /* height: 320px; */
+}
+/***** End 5TH SECTION *****/
