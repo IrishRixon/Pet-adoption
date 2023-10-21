@@ -171,10 +171,37 @@ body {
 /***** End 2ND SECTION *****/
 
 .third_section {
-    height: 322px;
     position: relative;
 }
-#right_container {
+.third_section .right_container {
+    width: 41.75%;
     position: absolute;
     top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.third_section .right_container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    justify-content: center;
+}
+.third_section .right_container .text h4 {
+    margin: 0;
+    color: var(--60, #E0E1DD);
+    font-family: Nunito;
+    font-size: 4vmin;
+    font-weight: 700;
+}
+.third_section .right_container .text span {
+    font-family: Roboto;
+    font-size: 3vmin;
+    color: var(--60, #E0E1DD);
 }
