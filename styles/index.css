@@ -37,7 +37,7 @@ body {
 }
 .logo_container h2 {
     font-family: 'Jomhuria';
-    font-size: 40px;
+    font-size: 3vw;
     color: var(--10-light, #778DA9);
     text-transform: uppercase;
     font-style: normal;
@@ -53,15 +53,18 @@ body {
     gap: 30px;
     margin: 0;
 }
-.options .options_btns li {
+.options .options_btns li a{
     display: block;
     padding: 20px 10px;
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 1.1vw;
     text-transform: uppercase;
     font-weight: 700;
+    text-decoration: none;
+    color: var(--60, #E0E1DD);
+    
 }
-.options .options_btns li.active {
+.options .options_btns li.active a {
     color: #778DA9;
 }
 
@@ -347,3 +350,45 @@ footer a {
     font-size: 1.5vw;
 }
 /***** End 5TH SECTION *****/
+
+
+/***** 7TH SECTION *****/
+.seventh_section {
+    background-color: #E0E1DD;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seventh_section .container{
+    position: absolute;
+    color: #E0E1DD;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.seventh_section .container .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.seventh_section .container .info .details {
+    display: flex;
+    flex-direction: column;
+    height: 49.44%;
+}
+.seventh_section .container .info .details h5 {
+    color: var(--60, #E0E1DD);
+    font-family: Nunito;
+    font-size: 30px;
+    font-weight: 700;
+}
+.seventh_section .container .info details span {
+    color: var(--60, #E0E1DD);
+    font-family: Roboto;
+    font-size: 20px;
+    display: flex;
+}
+
+/***** End 7TH SECTION *****/
