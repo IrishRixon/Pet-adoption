@@ -1,0 +1,1 @@
+try using switch in js and make it function

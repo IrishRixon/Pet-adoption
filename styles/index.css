@@ -1,0 +1,394 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../Assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('../Assets/fonts/Jomhuria-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+/***** NAV BAR *****/
+.nav_bar {
+    background: var(--30-darker, #0D1B2A);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+.logo_container img {
+    width: 39px;
+    height: 47px;
+    color: #778DA9;
+}
+.logo_container h2 {
+    font-family: 'Jomhuria';
+    font-size: 3vw;
+    color: var(--10-light, #778DA9);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.options .options_btns {
+    display: flex;
+    list-style: none;
+    color: var(--60, #E0E1DD);
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+.options .options_btns li a{
+    display: block;
+    padding: 20px 10px;
+    font-family: Roboto;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--60, #E0E1DD);
+    
+}
+.options .options_btns li.active a {
+    color: #778DA9;
+}
+
+.options .options_btns li:hover {
+    cursor: pointer;
+}
+.options_icons {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+.options_icons .material-icons {
+    color: #E0E1DD;
+    font-size: 40px;
+    list-style: none;
+}
+.options_icons .material-icons:hover {
+    cursor: pointer;
+}
+
+/***** End NAV BAR *****/
+
+
+/***** 1ST SECTION *****/
+.first_section {
+    width: 100%;
+    position: relative;
+    background: var(--60, #E0E1DD);
+}
+.first_section svg{
+    width: 100%;
+    z-index: 0;
+}
+.first_section .container {
+    position: absolute;
+    height: 286px;
+    top: 0;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+}
+.corgi_text_container {
+    width: 59.54%;
+    display: flex;
+    align-items: center;
+    color: var(--60, #E0E1DD);
+    gap: 20px;
+}
+.corgi_text_container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 50%;
+}
+.corgi_text_container .text h4{
+    font-family: Nunito;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: right;
+}
+.corgi_text_container .text span {
+    font-family: Roboto;
+    font-size: 19.843px;
+    text-align: end;
+}
+.corgi_text_container .corgi {
+    width: 50%;
+}
+.corgi_text_container .corgi img {
+    width: 100%;
+    position: relative;
+    bottom: -30px;
+}
+/***** End 1ST SECTION *****/
+
+
+/***** 2ND SECTION *****/
+.second_section {
+    background: var(--60, #E0E1DD);
+}
+.second_section .container {
+    height: 443px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second_section .container .icons_container {
+    display: flex;
+    width:718px;
+    height:175px;
+    gap: 93px;
+}
+.second_section .container .icons_container li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.second_section .container .icons_container li span{
+    color: #0D1B2A;
+    font-family: Roboto;
+    font-size: 19.843px;
+    text-align: center;
+}
+.second_section .container .icons_container li img {
+    display: block;
+}
+/***** End 2ND SECTION *****/
+
+
+/***** 3RD SECTION *****/
+.third_section {
+    position: relative;
+    background: var(--60, #E0E1DD);
+}
+.third_section .right_container {
+    width: 41.75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.third_section .right_container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    justify-content: center;
+    padding: 0px 170px 0 30px;
+}
+.third_section .right_container .text h4 {
+    margin: 0;
+    color: var(--60, #E0E1DD);
+    font-family: Nunito;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+.third_section .right_container .text span {
+    font-family: Roboto;
+    font-size: 1.5vw;
+    color: var(--60, #E0E1DD);
+}
+/***** End 3RD SECTION *****/
+
+
+/***** 4TH SECTION *****/
+ul {
+    padding: 0;
+}
+ul li{
+    list-style: none !important;
+    padding: none !important;
+}
+.fourth_section {
+    height: 724px;
+    display: flex;
+    align-items: center;
+    background: var(--60, #E0E1DD);
+}
+.fourth_section .container header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.fourth_section .container header h4 {
+    font-family: Nunito;
+    color: var(--30-darker, #0D1B2A);
+    font-size: 35px;
+}
+.pets_section.row {
+    height: 429px;
+    display: flex;
+}
+.pet.col-3 .pet_image{
+    border-radius: 5px;
+    height: 261px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.pet.col-3 .pet_name,
+.pet.col-3 .pet_breed,
+.pet.col-3 .pet_location,
+.pet_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pet.col-3 .pet_name  h5{
+    font-family: Nunito;
+    color: var(--30-darker, #0D1B2A);
+    font-size: 35px;
+    font-weight: 700;
+}
+i {
+    height: 24px;
+    width: 24px;
+}
+.pet_breed span {
+    font-family: Roboto;
+    font-size: 20px;
+    color: var(--30-light, #1B263B);
+}
+.pet_location span {
+    color: var(--30-light, #1B263B);
+    font-family: Roboto;
+    font-size: 20px;
+}
+.pet_button a{
+    text-decoration: none;
+    font-family: Roboto;
+    color: var(--60, #E0E1DD);
+    background: var(--10-darker, #415A77);
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+footer {
+    height: 50px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+}
+footer a {
+    display: flex;
+    font-family: Roboto;
+    font-size: 20px;
+    text-decoration: none;
+    color: #415A77;
+    border: 2px solid #415A77;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: content-box;
+    padding: 15px 35px;
+    align-items: center;
+}
+/***** End 4TH SECTION *****/
+
+
+/***** 5TH SECTION *****/
+.fifth_section {
+    position: relative;
+    background-color: #E0E1DD;
+}
+.fifth_section .right_container {
+    width: 41.75%;;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.right_container .text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    justify-content: center;
+    padding: 0 30px 0 160px;
+}
+.right_container .text h4 {
+    color: var(--60, #E0E1DD);
+    font-family: Nunito;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+.right_container .text span {
+    color: var(--60, #E0E1DD);
+    font-family: Roboto;
+    font-size: 1.5vw;
+}
+/***** End 5TH SECTION *****/
+
+
+/***** 7TH SECTION *****/
+.seventh_section {
+    background-color: #E0E1DD;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seventh_section .container{
+    position: absolute;
+    color: #E0E1DD;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.seventh_section .container .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.seventh_section .container .info .details {
+    display: flex;
+    flex-direction: column;
+    height: 49.44%;
+}
+.seventh_section .container .info .details h5 {
+    color: var(--60, #E0E1DD);
+    font-family: Nunito;
+    font-size: 30px;
+    font-weight: 700;
+}
+.seventh_section .container .info details span {
+    color: var(--60, #E0E1DD);
+    font-family: Roboto;
+    font-size: 20px;
+    display: flex;
+}
+
+/***** End 7TH SECTION *****/
