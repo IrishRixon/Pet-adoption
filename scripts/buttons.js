@@ -143,7 +143,7 @@ searchBtn.addEventListener('click', function () {
 });
 
 cancelBtn.addEventListener('click', function () {
-    forgotPassCurrentPage = forgotPassFormPage[0];
+    // forgotPassCurrentPage = forgotPassFormPage[0];
 
     cardContainer.className = "col-4";
     bodyOfLogin.style.display = "block";
@@ -181,6 +181,8 @@ continueBtn.addEventListener('click', function () {
 loginUsingPassword.addEventListener('click', function () {
     logInOpenClose('open');
     bodyOfForgotPass.style.display = "none";
+    forgotPassForm2.style.display = "none";
+    forgotPassTitle.innerHTML = "Find Your Account";
 });
 
 // FORM 3
@@ -197,10 +199,10 @@ forgotIncorrectEmailTxt.addEventListener('click', function() {
     }
 });
 
-//FORM 4
 forgotCancelBtn.addEventListener('click', function() {
     forgotPassOpenClose("close");
     logInOpenClose("open");
+    forgotPassForm3.style.display = "none";
 });
 
 forgotContinueBtn.addEventListener('click', function() {
@@ -210,11 +212,14 @@ forgotContinueBtn.addEventListener('click', function() {
     forgotPassTitle.innerText = "Enter New Password";
 });
 
+//FORM 4
 forgotDoneBtn.addEventListener('click', function() {
     forgotPassForm4.style.display = "none";
     accountSuccessForgotPass.style.display = "flex";
     cardContainer.style.height = "120px";
     forgotPassTitle.style.display = "none";
+    forgotPassTitle.innerText = "Find Your Account";
+
 
     setTimeout(function () {
         checkIconForgotPass.style.visibility = "visible";

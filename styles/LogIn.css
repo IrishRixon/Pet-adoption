@@ -160,6 +160,7 @@ body {
     font-family: 'Roboto';
     font-size: 19.8px;
     font-weight: 400;
+    text-align: center;
 }
 .forgotpass_button {
     text-align: center;
@@ -172,6 +173,13 @@ body {
     background-color: transparent;
     border: none;
 }
+.buttons .login_forgotpass .login_button  input:hover{
+    background-color: #3c5168;
+}
+.buttons .login_forgotpass .login_button  input:active{
+    background-color: #4c6989;
+}
+
 .forgotpass_button button:active {
     color: #415a88;
 }

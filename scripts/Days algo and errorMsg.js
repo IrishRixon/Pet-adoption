@@ -41,13 +41,20 @@ month.addEventListener('change', function () {
 
 function daysAlgo(monthValue) {
     let numberOfChildren = day.childElementCount;
+
+    /*monthValue =  0 = JANUARY, 
+                    1 = FEBRUARY, 
+                    2 = MARCH so on ...*/
+
+    //IF THE MONTH IS FEBRUARY
     if (monthValue === 1) {
-        while (numberOfChildren > 28) {
+        while (numberOfChildren > 29) {
             const lastChild = day.lastElementChild;
             lastChild.remove();
             numberOfChildren--;
         }
     }
+    //IF THE MONTH IS EVEN (, APRIL etch.)
     else if (monthValue % 2 == 0) {
         while (numberOfChildren != 31) {
             const option = document.createElement("option");
