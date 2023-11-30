@@ -110,7 +110,8 @@ body {
     height: 650px;
     flex-shrink: 0;
     z-index: 1;
-    transition: 1s linear;
+    background-color: var(--1st-BG);
+    transition: .4s;
 }
 .BG_design div {
     display: inline-block;
@@ -218,6 +219,7 @@ body {
     height: 463px;
     border-radius: 5px;
     object-fit: cover;
+    opacity: 0;
 }
 
 .container .row.content .col-5.offset-2 {
