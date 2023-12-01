@@ -2,64 +2,93 @@ const sections = document.querySelector(".sections"),
     sectionsChildren = sections.children,
     bgDesign = document.querySelector(".BG_design");
 
-    const image = sections.querySelector('img');
-console.log(image);
-
+//A FUNCTION WHEN THE USER SCROLL DOWN
 const scrollDown = (evenOdd) => {
-    sectionsChildren[index].style.height = "0";
+    sectionsChildren[index].style.height = "0"; //SET THE HEIGHT OF A SECTION SO THAT IT LOOK LIKE DISAPPEARING
+
+    /* HIDE THE IMAGE OF CURRENT SECTION FIRST AND THEN CHANGE THE BACKGROUND OF PAW PRINTS. 
+    AFTERWARD, THE NEXT IMAGE WILL SHOW */
+    hideImage();
     index++;
     changeBG(evenOdd);
     showImage();
 };
 
+//A FUNCTION WHEN THE USER SCROLL UP
 const scrollUp = (evenOdd) => {
+    hideImage();
     index--;
-    sectionsChildren[index].style.height = "650px";
+    sectionsChildren[index].style.height = "650px"; //SET THE HEIGHT OF A SECTION SO THAT IT LOOK LIKE APPEARING
     changeBG(evenOdd);
+    showImage();
 };
 
+/*A FUNCTION TO CHANGE THE BACKGROUND OF PAW PRINTS SO THAT 
+THE MIX-BLEND-MODE IN CSS TAKE EFFECT */
 const changeBG = (evenOdd) => {
     bgDesign.style.opacity = "0";
 
-    setTimeout(() => {
-        console.log(evenOdd);
-        switch (evenOdd) {
-            case 0:
-                bgDesign.style.background = "var(--2nd-BG)";
-                break;
-            case 1:
-                bgDesign.style.background = "var(--1st-BG)";
-                break;
-        }
-        bgDesign.style.opacity = "1";
-    }, 400);
+    // DETERMINE THE COLOR OF THE PAW PRINTS BACKGROUND
+    switch (evenOdd) {
+        case 0:
+            bgDesign.style.background = "var(--2nd-BG)";
+            break;
+        case 1:
+            bgDesign.style.background = "var(--1st-BG)";
+            break;
+    }
+    bgDesign.style.opacity = "1";
 };
 
+//A FUNCTION TO SHOW IMAGE
 const showImage = () => {
-    const image = sections.querySelector('img');
-    
-    if(num != index) {
-        image[index].style.opacity = '1';
-        num++;
+    const image = sectionsChildren[index].querySelector('img'); //FIND THE IMAGE OF CURRENT SECTION
+    image.style.opacity = '1';
+}
+
+//A FUNCTION TO HIDE IMAGE
+const hideImage = () => {
+    const image = sectionsChildren[index].querySelector('img'); //FIND THE IMAGE OF CURRENT SECTION
+
+    // HIDE THE IMAGE OF THE IMAGES EXCEPT THE IMAGE IN THE FIRST SECTION
+    // WHICH IS THE LOGO
+    if (index != 0) {
+        image.style.opacity = '0';
     }
 }
 
-let index = 0;
-let num = 0;
+const pauseEvent = () => {
+    window.removeEventListener('wheel', scrollDirection);
 
-window.addEventListener("wheel", (e) => {
+    const timeout = setTimeout(() => {
+        window.addEventListener('wheel', scrollDirection);
+    }, 800);
+
+    // clearTimeout(timeout);
+}
+let index = 0;
+
+const scrollDirection = (e) => {
     let deltaY = e.deltaY;
     let evenOdd = index % 2;
 
-    if (deltaY == 125 && index != 6) {
+    console.log(deltaY);
+
+    if (deltaY > 20 && index != 6) {
         scrollDown(evenOdd);
-    } else if (deltaY == -125 && index != 0) {
-        scrollUp(evenOdd);
+        pauseEvent();
+        deltaY = 0;
     }
-});
+    else if (deltaY < -20 && index != 0) {
+        scrollUp(evenOdd);
+        pauseEvent();
+        deltaY = 0;
+    }
+
+}
 
 
+//EVENT LISTENER FOR MOUSE SCROLL UP AND DOWN
+window.addEventListener("wheel", scrollDirection);
 
-//BUG NOTE
 
-//FIX THE IMAGE OPACITY BY FIXING THE SHOWIMAGE FUNCTION .. GET THE IMG ELEMENT FIRST TO MOVE FORWARD
