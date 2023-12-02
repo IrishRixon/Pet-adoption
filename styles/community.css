@@ -1,0 +1,163 @@
+:root {
+    --60:#E0E1DD;
+    --30-darker: #0D1B2A;
+    --30-lighter: #1B263B;
+    --10-darker: #415A77;
+    --10-lighter: #778DA9;
+    --grey:#ECECEC;
+    --post-text: #BBBBBB;
+    --card-bg-: #D9D9D9;
+}
+body {
+    background-color: var(--60);
+}
+/***** NAV BAR *****/
+.nav_bar {
+    background: var(--30-darker, #1B263B);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+.logo_container img {
+    width: 39px;
+    height: 47px;
+    color: #778DA9;
+}
+.logo_container h2 {
+    font-family: 'Jomhuria';
+    font-size: 3vw;
+    color: var(--10-light, #778DA9);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.options .options_btns {
+    display: flex;
+    list-style: none;
+    color: var(--60, #E0E1DD);
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+.options .options_btns li a{
+    display: block;
+    padding: 20px 10px;
+    font-family: Roboto;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--60, #E0E1DD);
+    
+}
+.options .options_btns li.active a {
+    color: #778DA9;
+}
+
+.options .options_btns li:hover {
+    cursor: pointer;
+}
+.options_icons {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+.options_icons .material-icons {
+    color: #E0E1DD;
+    font-size: 40px;
+    list-style: none;
+}
+.options_icons .material-icons:hover {
+    cursor: pointer;
+}
+
+/***** End NAV BAR *****/
+
+/***** UPLOAD SECTION *****/
+.upload_section {
+    width: 100%;
+    margin: 15px 0 25px 0;
+    box-shadow: 0px 0px 10px var(--post-text);
+}
+.upload {
+    width: 100%;
+    height: 118px;
+    background-color: white;
+    border-radius: 10px;
+}
+.DP_container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.DP_container img {
+    border: 3px solid var(--post-text);
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.thoughts_input {
+    position: relative;
+    width: 80%;
+}
+.thoughts_input label {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: var(--post-text);
+}
+#thoughts_input {
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--grey);
+    padding: 0;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #d6d6d6;
+    text-justify: distribute;
+}
+.buttons_vessel {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid var(--grey);
+}
+.buttons_vessel button{
+    border: none;
+    color: var(--10-darker);
+    background-color: white;
+    border: 1px solid var(--grey);
+    transition: .5s;
+}
+.buttons_vessel #photo_btn,
+.buttons_vessel #video_btn {
+    width: 40%;
+}
+.buttons_vessel #post_btn {
+    width: 20%;
+    color: var(--10-lighter);
+}
+
+/* PSEUDO */
+input#thoughts_input:focus {
+    border: 2px solid var(--post-text);
+    outline: none;
+}
+input#thoughts_input:focus~label,
+input#thoughts_input:valid~label {
+    display: none;
+}
+.buttons_vessel button:hover {
+    transform: scale(1.02);
+}
+.buttons_vessel button#photo_btn:hover {
+    box-shadow: 1px 2px 10px var(--post-text);
+}
+
+/***** End UPLOAD SECTION *****/

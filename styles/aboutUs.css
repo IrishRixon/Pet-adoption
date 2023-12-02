@@ -1,32 +1,8 @@
-@font-face {
-    font-family: 'Nunito';
-    src: url('../Assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Assets/fonts/Roboto-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Jomhuria';
-    src: url('../Assets/fonts/Jomhuria-Regular.ttf') format('truetype');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
-}
-
 :root {
     --1st-BG: #0D1B2A;
     --2nd-BG: #1B263B;
 }
 
-html,
-body {
-    height: 100vh;
-}
 body {
     /*1st color*/
     background-color: var(--1st-BG); 

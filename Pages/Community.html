@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/ab3a25b52a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="../styles/allStyle.css">
+  <link rel="stylesheet" href="../styles/community.css">
 </head>
+
 <body>
-    
+
+  <!-- ========== Start NAV BAR ========== -->
+  <nav class="nav_bar">
+    <div class="container d-flex h-100">
+      <div class="logo_container d-flex col-2 justify-content-center align-items-center">
+        <img src="../Assets/images/Frame light.png" alt="" />
+        <h2>cutiepets</h2>
+      </div>
+
+      <div class="options col-10 d-flex justify-content-between">
+        <ul class="options_btns">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dogsWorld.html">Dog</a></li>
+          <li><a href="catWorld.html">Cat</a></li>
+          <li><a href="aboutUs.html">About us</a></li>
+          <li class="active"><a href="#">Community</a></li>
+        </ul>
+
+        <ul class="options_icons">
+          <li><span class="material-icons">search</li>
+          <li><span class="material-icons">account_circle</span></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ========== End NAV BAR ========== -->
+
+
+  <div class="container w-50">
+
+    <!-- ========== Start UPLOAD SECTION ========== -->
+      <div class="upload_section">
+        <div class="upload">
+          <div class="prof-inp_vessel w-100 h-50 d-flex p-2 ps-0">
+            <div class="DP_container">
+              <img src="../Assets/images/defaultpic.jpg" alt="Failed to Load Image">
+            </div>
+
+            <div class="thoughts_input">
+              <input type="text" id="thoughts_input" required="">
+              <label for="thoughts_input">Share your experience as Pet adopter </label>
+            </div>
+          </div>
+
+          <div class="buttons_vessel">
+            <button type="button" id="photo_btn" style="border-radius: 0 0 0 10px;"><i class="fa-solid fa-camera"></i></button>
+
+            <button type="button" id="video_btn"><i class="fa-solid fa-video"></i></button>
+
+            <button type="button" id="post_btn" style="border-radius: 0 0 10px 0;"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    <!-- ========== End UPLOAD SECTION ========== -->
+
+  </div>
+
 </body>
+
 </html>
