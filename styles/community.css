@@ -78,14 +78,18 @@ body {
 /***** End NAV BAR *****/
 
 /***** UPLOAD SECTION *****/
+.container {
+    height: 100vh;
+}
 .upload_section {
     width: 100%;
+    height: 15%;
     margin: 15px 0 25px 0;
     box-shadow: 0px 0px 10px var(--post-text);
 }
 .upload {
     width: 100%;
-    height: 118px;
+    height: 100%;
     background-color: white;
     border-radius: 10px;
 }
@@ -98,7 +102,8 @@ body {
 .DP_container img {
     border: 3px solid var(--post-text);
     border-radius: 50%;
-    height: 100%;
+    height: 44px;
+    width: 44px;
     object-fit: cover;
 }
 .thoughts_input {
@@ -122,26 +127,33 @@ body {
     border: 1px solid #d6d6d6;
     text-justify: distribute;
 }
-.buttons_vessel {
+#buttons_vessel {
     display: flex;
     width: 100%;
     height: 50%;
     border-top: 2px solid var(--grey);
 }
-.buttons_vessel button{
+#buttons_vessel button{
     border: none;
     color: var(--10-darker);
     background-color: white;
     border: 1px solid var(--grey);
     transition: .5s;
+    height: 100%;
 }
-.buttons_vessel #photo_btn,
-.buttons_vessel #video_btn {
+#buttons_vessel button i {
+    font-size: 22px;
+}
+#buttons_vessel #photo_btn,
+#buttons_vessel #video_btn {
     width: 40%;
-}
-.buttons_vessel #post_btn {
+}#buttons_vessel #post_btn {
     width: 20%;
     color: var(--10-lighter);
+}
+
+#buttons_vessel input {
+    display: none;
 }
 
 /* PSEUDO */
@@ -153,11 +165,116 @@ input#thoughts_input:focus~label,
 input#thoughts_input:valid~label {
     display: none;
 }
-.buttons_vessel button:hover {
-    transform: scale(1.02);
+#buttons_vessel button:hover {
+    transform: scale(1.01);
 }
-.buttons_vessel button#photo_btn:hover {
-    box-shadow: 1px 2px 10px var(--post-text);
+#buttons_vessel button#photo_btn:hover {
+    box-shadow: 5px 5px 10px var(--post-text);
+}
+#buttons_vessel button#video_btn:hover {
+    box-shadow: 5px 5px 10px var(--post-text),
+    -5px 5px 10px var(--post-text);
+}
+#buttons_vessel button#post_btn:hover {
+    box-shadow: -5px 5px 10px var(--post-text);
 }
 
+#buttons_vessel button#photo_btn:active {
+    box-shadow: 5px 5px 10px var(--post-text) inset;
+}
+#buttons_vessel button#video_btn:active {
+    box-shadow: 5px 5px 10px var(--post-text) inset;
+}
+#buttons_vessel button#post_btn:active {
+    box-shadow: 5px 5px 10px var(--post-text) inset;
+}
 /***** End UPLOAD SECTION *****/
+
+
+/***** POST *****/
+.post {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 35px 0 35px;
+    box-shadow: 0px 0px 10px var(--post-text);
+    margin-bottom: 30px;
+}
+.user-info {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 19px;
+}
+.user-info .DP {
+    height: 54px;
+    width: 54px;
+}
+.user-info .DP img {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    border: 3px solid var(--post-text);
+    object-fit: cover;
+}
+.user-info .post-info .user-fullname span{
+    color: var(--30-lighter);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.user-info .post-info .date span {
+    color: var(--10-darker);
+    font-size: 12px;
+}
+
+.post_body {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.post_body .caption #caption {
+    color: var(--30-lighter);
+    font-size: 16px;
+}
+.post_body .picture {
+    height: 476px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.post_body .picture img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border-radius: 5px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    border-top: 2px solid var(--post-text);
+    border-radius: 5px;
+}
+.buttons button {
+    width: 50%; 
+    height: 70px;
+    background-color: transparent;
+    border: none solid var(--post-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+.buttons button i {
+    font-size: 25px;
+    color: var(--30-darker);
+}
+
+/* PSEUDO */
+.buttons button:hover {
+    background-color: var(--post-text);
+}
+/***** End POST *****/
